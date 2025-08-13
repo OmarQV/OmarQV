@@ -53,9 +53,12 @@ const Omar = {
 
 ![Solidity](https://img.shields.io/badge/Solidity-363636?style=for-the-badge&logo=solidity&logoColor=white)
 ![Ethereum](https://img.shields.io/badge/Ethereum-3C3C3D?style=for-the-badge&logo=ethereum&logoColor=white)
-![Hardhat](https://img.shields.io/badge/Hardhat-FFF100?style=for-the-badge&logo=hardhat&logoColor=black)
+![Motoko](https://img.shields.io/badge/Motoko-29ABE2?style=for-the-badge&logo=internet-computer&logoColor=white)
+![Foundry](https://img.shields.io/badge/Foundry-1A1B23?style=for-the-badge&logo=foundry&logoColor=white)
+![Avalanche](https://img.shields.io/badge/Avalanche-E84142?style=for-the-badge&logo=avalanche&logoColor=white)
 ![Web3.js](https://img.shields.io/badge/Web3.js-F16822?style=for-the-badge&logo=web3.js&logoColor=white)
 ![MetaMask](https://img.shields.io/badge/MetaMask-E2761B?style=for-the-badge&logo=metamask&logoColor=white)
+![CORE Wallet](https://img.shields.io/badge/CORE_Wallet-FF6B35?style=for-the-badge&logo=wallet&logoColor=white)
 ![OpenZeppelin](https://img.shields.io/badge/OpenZeppelin-4E5EE4?style=for-the-badge&logo=openzeppelin&logoColor=white)
 
 </details>
@@ -138,36 +141,9 @@ const Omar = {
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=OmarQV&theme=tokyo-night&hide_border=true&bg_color=0d1117" alt="Activity Graph" />
 </div>
 
----
 
-## 🏆 **Certificaciones & Logros**
 
-<div align="center">
 
-| 🎯 **Cybersecurity** | 📊 **Blockchain** | 💻 **Development** | 🌐 **Networking** |
-|:---:|:---:|:---:|:---:|
-| ✅ Ethical Hacking Fundamentals | ✅ Smart Contract Development | ✅ Full Stack Web Development | ✅ Network Security Protocols |
-| 🔄 CEH Certification (En progreso) | ✅ DeFi Protocol Design | ✅ React Advanced Patterns | ✅ LAN/WAN Management |
-| ✅ Vulnerability Assessment | 🔄 Solidity Security Auditor | ✅ TypeScript Expert Level | ✅ Network Penetration Testing |
-| ✅ Penetration Testing Basics | ✅ Web3 Integration Specialist | ✅ Database Design & Optimization | ✅ Cisco Networking Concepts |
-
-</div>
-
----
-
-## 🚀 **Proyectos Destacados**
-
-<div align="center">
-
-| 🔗 Proyecto | 🛠️ Tecnologías | 📊 Estado | 🌟 Destacado |
-|:---|:---|:---:|:---:|
-| **🏦 DeFiVault Protocol** | `Solidity` `React` `Web3.js` `Hardhat` | 🔄 En desarrollo | Yield Farming + Governance |
-| **🛡️ SmartAudit Suite** | `Python` `Solidity` `SQLite` | ✅ Completado | Análisis de vulnerabilidades |
-| **🛒 SecureShop dApp** | `React` `TypeScript` `PostgreSQL` `Ethereum` | 🚀 Producción | E-commerce descentralizado |
-| **🔍 NetScanner Pro** | `Python` `Nmap` `MySQL` | ✅ Completado | Network Security Scanner |
-| **⚡ LightningPay** | `Solidity` `React` `Web3` | 🔄 Beta | Micropagos instantáneos |
-
-</div>
 
 ---
 
@@ -263,21 +239,7 @@ graph LR
 
 </div>
 
----
 
-## 🎯 **Métricas de Rendimiento**
-
-<div align="center">
-
-| Métrica | Valor | Descripción |
-|:---:|:---:|:---|
-| 📊 **Code Quality Score** | 9.2/10 | Basado en análisis estático de código |
-| 🔒 **Security Score** | 95% | Evaluación de prácticas de seguridad |
-| ⚡ **Performance Index** | 8.8/10 | Optimización de aplicaciones |
-| 🧪 **Test Coverage** | 85% | Cobertura promedio de tests |
-| 🚀 **Deployment Success** | 98% | Tasa de éxito en despliegues |
-
-</div>
 
 ---
 
@@ -287,17 +249,7 @@ graph LR
   <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight&quote=The%20best%20way%20to%20predict%20the%20future%20is%20to%20create%20it&author=Peter%20Drucker" alt="Quote"/>
 </div>
 
----
 
-## 📊 **Actividad Reciente**
-
-<!--START_SECTION:activity-->
-1. 🎉 Merged PR [#42](https://github.com/OmarQV/defi-vault) in **DeFiVault Protocol**
-2. ⭐ Starred [hardhat](https://github.com/nomiclabs/hardhat)
-3. 🔒 Opened issue about security vulnerability in **SmartAudit Suite**
-4. 💻 Pushed 5 commits to **SecureShop dApp**
-5. 🤝 Started following [@vitalikbuterin](https://github.com/vbuterin)
-<!--END_SECTION:activity-->
 
 ---
 
