@@ -166,10 +166,10 @@ const contributionsStats = {
 
 ```mermaid
 graph LR
-    A[Q4 2024: Mobile Dev] --> B[Q1 2025: DApp Mastery]
+    A[Q4 2026: Mobile Dev] --> B[Q1 2026: DApp Mastery]
     B --> C[Q2 2025: EJPT Cert]
-    C --> D[Q3 2025: Full Stack Pro]
-    D --> E[Q4 2025: Advanced Security]
+    C --> D[Q3 2026: Full Stack Pro]
+    D --> E[Q4 2026: Advanced Security]
     
     A1[React Native] --> A
     A2[Flutter] --> A
@@ -191,38 +191,6 @@ graph LR
     E2[Blockchain Security] --> E
     E3[Bug Bounty Programs] --> E
 ```
-
-### 🎯 **Detailed Goals:**
-
-**📱 Q4 2024 - Mobile Development**
-- Master **React Native** for cross-platform apps
-- Learn **Flutter** for native performance
-- Build 2-3 mobile apps with backend integration
-- Study mobile security best practices
-
-**🌐 Q1 2025 - DApp Expertise**
-- Deploy 3+ production-ready **DApps**
-- Master **Avalanche & Internet Computer** ecosystems
-- Implement **DeFi protocols** with Foundry
-- Create **Web3 mobile integration**
-
-**🛡️ Q2 2025 - EJPT Certification**
-- Complete **eLearnSecurity** PTS course
-- Practice on **HackTheBox** and **TryHackMe**
-- Focus on **web application penetration testing**
-- Get certified as **eLearnSecurity Junior Penetration Tester**
-
-**💻 Q3 2025 - Full Stack Mastery**
-- Advanced **React/TypeScript** patterns
-- Master **Next.js** and **server-side rendering**
-- Learn **cloud deployment** (AWS/Vercel/Netlify)
-- Implement **CI/CD pipelines**
-
-**🔒 Q4 2025 - Advanced Security**
-- Specialize in **Smart Contract auditing**
-- Join **bug bounty programs** (Immunefi, HackerOne)
-- Study **advanced cryptography**
-- Contribute to **security research**
 
 ---
 
@@ -282,12 +250,6 @@ graph LR
 
 <div align="center">
   <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight&quote=The%20best%20way%20to%20predict%20the%20future%20is%20to%20create%20it&author=Peter%20Drucker" alt="Quote"/>
-</div>
-
----
-
-<div align="center">
-  <img src="https://github.com/OmarQV/OmarQV/blob/output/github-contribution-grid-snake-dark.svg" alt="Snake eating my contributions" />
 </div>
 
 ---
