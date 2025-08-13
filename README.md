@@ -1,10 +1,10 @@
 ![BannerG](https://github.com/OmarQV/OmarQV/assets/153705582/0949c262-d2be-400a-b2da-0460b7db07ab)
 
 <div align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=30&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=600&lines=👋+Hola%2C+Soy+Omar;🚀+Blockchain+Developer;🛡️+Ethical+Hacker;💻+Full+Stack+Engineer;🔒+Security+Specialist" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=30&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=600&lines=👋+Hi%2C+I'm+Omar;🚀+Blockchain+Developer;🛡️+Ethical+Hacker;💻+Full+Stack+Engineer;🔒+Security+Specialist" alt="Typing SVG" />
 </div>
 
-<h3 align="center">🌟 Transformando Ideas en Código Seguro | Innovando en Web3 🌟</h3>
+<h3 align="center">🌟 Transforming Ideas into Secure Code | Innovating in Web3 🌟</h3>
 
 <div align="center">
   <img src="https://komarev.com/ghpvc/?username=OmarQV&label=Profile%20Views&color=blueviolet&style=for-the-badge" alt="Profile views" />
@@ -22,7 +22,7 @@
 
 <img align="right" alt="Coding" width="350" src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif">
 
-## 🚀 **Sobre Mí**
+## 🚀 **About Me**
 
 ```typescript
 const Omar = {
@@ -37,7 +37,7 @@ const Omar = {
 };
 ```
 
-### 🎯 **Especialidades**
+### 🎯 **Specialties**
 - 🔗 **Blockchain Development** - Smart Contracts, DeFi, Web3
 - 🛡️ **Cybersecurity** - Penetration Testing, Vulnerability Assessment
 - 💻 **Full Stack Development** - React, TypeScript, Node.js
@@ -45,7 +45,7 @@ const Omar = {
 
 ---
 
-## 🛠️ **Arsenal Tecnológico**
+## 🛠️ **Tech Arsenal**
 
 <details open>
 <summary><b>🌐 Blockchain & Web3</b></summary>
@@ -64,7 +64,7 @@ const Omar = {
 </details>
 
 <details open>
-<summary><b>💻 Lenguajes & Frameworks</b></summary>
+<summary><b>💻 Languages & Frameworks</b></summary>
 <br>
 
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
@@ -89,7 +89,7 @@ const Omar = {
 </details>
 
 <details open>
-<summary><b>🗄️ Bases de Datos & Backend</b></summary>
+<summary><b>🗄️ Databases & Backend</b></summary>
 <br>
 
 ![MySQL](https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white)
@@ -113,7 +113,7 @@ const Omar = {
 </details>
 
 <details open>
-<summary><b>🖥️ Sistemas & DevOps</b></summary>
+<summary><b>🖥️ Systems & DevOps</b></summary>
 <br>
 
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
@@ -141,13 +141,9 @@ const Omar = {
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=OmarQV&theme=tokyo-night&hide_border=true&bg_color=0d1117" alt="Activity Graph" />
 </div>
 
-
-
-
-
 ---
 
-## 🌟 **Contribuciones Open Source**
+## 🌟 **Open Source Contributions**
 
 ```typescript
 const contributionsStats = {
@@ -166,7 +162,7 @@ const contributionsStats = {
 
 ---
 
-## 📈 **Roadmap 2024**
+## 📈 **2024 Roadmap**
 
 ```mermaid
 graph LR
@@ -189,67 +185,63 @@ graph LR
 
 ---
 
-## 🔥 **Habilidades en Acción**
+## 🔥 **Skills in Action**
 
 <div align="center">
 
-### 💡 **Filosofía de Desarrollo**
+### 💡 **Development Philosophy**
 
-> *"El mejor código es el que nunca necesitas escribir, pero cuando lo haces, que sea elegante, seguro y escalable"*
+> *"The best code is the one you never need to write, but when you do, make it elegant, secure, and scalable"*
 
 </div>
 
 <details>
-<summary><b>🔐 Enfoque en Seguridad</b></summary>
+<summary><b>🔐 Security-First Approach</b></summary>
 
-- **Secure by Design**: Cada línea de código pensada en seguridad
-- **Threat Modeling**: Análisis proactivo de vectores de ataque  
-- **Code Review**: Revisiones exhaustivas antes de deployment
-- **Penetration Testing**: Pruebas regulares de penetración
-- **Smart Contract Audits**: Auditorías especializadas en Solidity
+- **Secure by Design**: Every line of code designed with security in mind
+- **Threat Modeling**: Proactive analysis of attack vectors  
+- **Code Review**: Thorough reviews before deployment
+- **Penetration Testing**: Regular penetration testing
+- **Smart Contract Audits**: Specialized audits in Solidity
 
 </details>
 
 <details>
-<summary><b>⚡ Metodologías Ágiles</b></summary>
+<summary><b>⚡ Agile Methodologies</b></summary>
 
-- **Scrum Master Certified**: Gestión ágil de proyectos
-- **DevSecOps**: Integración de seguridad en CI/CD
-- **Test Driven Development**: Desarrollo orientado a pruebas
-- **Continuous Integration**: Despliegues automatizados seguros
-- **Code Quality**: Métricas de calidad automatizadas
+- **Scrum Master Certified**: Agile project management
+- **DevSecOps**: Security integration in CI/CD
+- **Test Driven Development**: Test-oriented development
+- **Continuous Integration**: Secure automated deployments
+- **Code Quality**: Automated quality metrics
 
 </details>
 
 ---
 
-## 🌐 **Conecta Conmigo**
+## 🌐 **Connect With Me**
 
 <div align="center">
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/tu-perfil)
-[![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/tu-usuario)
-[![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/tu-usuario)
-[![Discord](https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/tu-usuario)
-[![Email](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:tu-email@gmail.com)
-[![Portfolio](https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=todoist&logoColor=white)](https://tu-portfolio.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/omar-quispe-vargas-7b5601204)
+[![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://x.com/OmarQV2025)
+[![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/omar_q_v)
+[![Discord](https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white)](https://discord.com/invite/FBF8S88K)
+[![Email](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:quispevargasomar@gmail.com)
+[![Portfolio](https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=todoist&logoColor=white)](https://your-portfolio.com)
 
-### 📧 **Para Colaboraciones**
-> **Desarrollo Blockchain** • **Auditorías de Seguridad** • **Consultoría Técnica** • **Code Reviews**
+### 📧 **For Collaborations**
+> **Blockchain Development** • **Security Audits** • **Technical Consulting** • **Code Reviews**
 
 </div>
 
-
-
 ---
 
-## 🎨 **Cita Inspiracional Diaria**
+## 🎨 **Daily Inspirational Quote**
 
 <div align="center">
   <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight&quote=The%20best%20way%20to%20predict%20the%20future%20is%20to%20create%20it&author=Peter%20Drucker" alt="Quote"/>
 </div>
-
-
 
 ---
 
@@ -261,9 +253,9 @@ graph LR
 
 <div align="center">
 
-### 🚀 *"Construyendo el futuro, un commit a la vez"*
+### 🚀 *"Building the future, one commit at a time"*
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=100&section=footer&text=¡Gracias%20por%20visitar!&fontSize=30&fontColor=fff&animation=twinkling"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=100&section=footer&text=Thanks%20for%20visiting!&fontSize=30&fontColor=fff&animation=twinkling"/>
 
 </div>
 
@@ -272,5 +264,5 @@ graph LR
 <div align="center">
   <img src="https://komarev.com/ghpvc/?username=OmarQV&style=for-the-badge&color=blueviolet" alt="Profile Views"/>
   
-  **⚡ Última actualización: Automática cada 24h ⚡**
+  **⚡ Last updated: Automatically every 24h ⚡**
 </div>
