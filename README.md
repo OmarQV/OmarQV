@@ -162,26 +162,67 @@ const contributionsStats = {
 
 ---
 
-## 📈 **2024 Roadmap**
+## 📈 **2024-2025 Development Roadmap**
 
 ```mermaid
 graph LR
-    A[Q1: Solidity Mastery] --> B[Q2: Rust Learning]
-    B --> C[Q3: dApp Launch]
-    C --> D[Q4: Security Audit Cert]
+    A[Q4 2024: Mobile Dev] --> B[Q1 2025: DApp Mastery]
+    B --> C[Q2 2025: EJPT Cert]
+    C --> D[Q3 2025: Full Stack Pro]
+    D --> E[Q4 2025: Advanced Security]
     
-    A1[Smart Contracts] --> A
-    A2[DeFi Protocols] --> A
+    A1[React Native] --> A
+    A2[Flutter] --> A
+    A3[Mobile UI/UX] --> A
     
-    B1[Blockchain Runtime] --> B
-    B2[Substrate Framework] --> B
+    B1[Web3 Integration] --> B
+    B2[Smart Contract Audit] --> B
+    B3[DeFi Protocols] --> B
     
-    C1[Full Stack dApp] --> C
-    C2[Token Economics] --> C
+    C1[Penetration Testing] --> C
+    C2[Network Security] --> C
+    C3[Vulnerability Assessment] --> C
     
-    D1[CEH Certification] --> D
-    D2[Bug Bounty Program] --> D
+    D1[Next.js/Nuxt.js] --> D
+    D2[Cloud Deployment] --> D
+    D3[DevOps Pipeline] --> D
+    
+    E1[Advanced Cryptography] --> E
+    E2[Blockchain Security] --> E
+    E3[Bug Bounty Programs] --> E
 ```
+
+### 🎯 **Detailed Goals:**
+
+**📱 Q4 2024 - Mobile Development**
+- Master **React Native** for cross-platform apps
+- Learn **Flutter** for native performance
+- Build 2-3 mobile apps with backend integration
+- Study mobile security best practices
+
+**🌐 Q1 2025 - DApp Expertise**
+- Deploy 3+ production-ready **DApps**
+- Master **Avalanche & Internet Computer** ecosystems
+- Implement **DeFi protocols** with Foundry
+- Create **Web3 mobile integration**
+
+**🛡️ Q2 2025 - EJPT Certification**
+- Complete **eLearnSecurity** PTS course
+- Practice on **HackTheBox** and **TryHackMe**
+- Focus on **web application penetration testing**
+- Get certified as **eLearnSecurity Junior Penetration Tester**
+
+**💻 Q3 2025 - Full Stack Mastery**
+- Advanced **React/TypeScript** patterns
+- Master **Next.js** and **server-side rendering**
+- Learn **cloud deployment** (AWS/Vercel/Netlify)
+- Implement **CI/CD pipelines**
+
+**🔒 Q4 2025 - Advanced Security**
+- Specialize in **Smart Contract auditing**
+- Join **bug bounty programs** (Immunefi, HackerOne)
+- Study **advanced cryptography**
+- Contribute to **security research**
 
 ---
 
