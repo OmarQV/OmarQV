@@ -162,7 +162,7 @@ const contributionsStats = {
 
 ---
 
-## 📈 **2024-2025 Development Roadmap**
+## 📈 **2025-2026 Development Roadmap**
 
 ```mermaid
 graph LR
