@@ -265,7 +265,5 @@ graph LR
 ---
 
 <div align="center">
-  <img src="https://komarev.com/ghpvc/?username=OmarQV&style=for-the-badge&color=blueviolet" alt="Profile Views"/>
-  
   **⚡ Last updated: Automatically every 24h ⚡**
 </div>
