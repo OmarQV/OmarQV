@@ -101,7 +101,7 @@ const Omar = {
 </details>
 
 <details open>
-<summary><b>🔒 Cybersecurity & Tools</b></summary>
+<summary><b>🔒 Cybersecurity & Tools 🔒</b></summary>
 <br>
 
 ![Kali Linux](https://img.shields.io/badge/Kali_Linux-557C94?style=for-the-badge&logo=kali-linux&logoColor=white)
