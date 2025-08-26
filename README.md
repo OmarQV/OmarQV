@@ -12,11 +12,6 @@
   <img src="https://img.shields.io/github/stars/OmarQV?label=Stars&style=for-the-badge&color=yellow" alt="GitHub stars" />
 </div>
 
-<br>
-
-<div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=OmarQV&theme=tokyonight&no-frame=true&row=1&column=7" alt="GitHub Trophies"/>
-</div>
 
 ---
 
