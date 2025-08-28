@@ -258,7 +258,3 @@ graph LR
 </div>
 
 ---
-
-<div align="center">
-  **⚡ Last updated: Automatically every 24h ⚡**
-</div>
