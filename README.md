@@ -21,7 +21,7 @@
 
 ```typescript
 const Omar = {
-    location: "🌍 La Paz, Bolivia",
+    location: "🌍 Bolivia",
     currentFocus: ["DeFi", "Smart Contracts", "Cybersecurity"],
     workingOn: "Building the next generation of secure dApps",
     learning: ["Rust", "Move", "Advanced Cryptography"],
