@@ -24,7 +24,7 @@ const Omar = {
     location: "🌍 Bolivia",
     currentFocus: ["DeFi", "Smart Contracts", "Cybersecurity"],
     workingOn: "Building the next generation of secure dApps",
-    learning: ["Rust", "Move", "Advanced Cryptography"],
+    learning: ["Rust", "Move", "Asembler", "Advanced Cryptography"],
     askMeAbout: ["Solidity", "React", "Ethical Hacking", "Blockchain"],
     funFact: "I debug smart contracts and hunt vulnerabilities for fun! 🐛🔍",
     goals2024: "Contribute to major DeFi protocols & launch my own dApp",
