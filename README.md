@@ -22,7 +22,7 @@
 ```typescript
 const Omar = {
     location: "🌍 Bolivia",
-    currentFocus: ["DeFi", AI Agent, Privacy, Rust, DeFiLlama, "Smart Contracts", "Cybersecurity", Protocols ERC],
+    currentFocus: ["DeFi", AI Agent, Privacy, Rust, Chainlink, DeFiLlama, "Smart Contracts", "Cybersecurity", Protocols ERC],
     workingOn: "Building the next generation of secure dApps",
     learning: ["Rust", "Asembler", "Advanced Cryptography", ISO],
     askMeAbout: ["Solidity", "React", "Ethical Hacking", "Blockchain"],
