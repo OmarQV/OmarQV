@@ -25,7 +25,7 @@ const Omar = {
     currentFocus: ["DeFi", AI Agent, Privacy, Rust, Chainlink, DeFiLlama, "Smart Contracts", "Cybersecurity", Protocols ERC],
     workingOn: "Building the next generation of secure dApps",
     learning: ["Rust", "Asembler", Yellow Network, ENS, Uniswap, "Advanced Cryptography", ISO],
-    askMeAbout: ["Solidity", "React", "Ethical Hacking", "Blockchain"],
+    askMeAbout: ["Solidity", "Chainlink", "web3", "Ethical Hacking", "Blockchain"],
     funFact: "I debug smart contracts and hunt vulnerabilities for fun! 🐛🔍",
     goals2024: "Contribute to major DeFi protocols & launch my own dApp",
     motto: "Code with purpose, secure by design 🔐"
