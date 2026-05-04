@@ -24,7 +24,7 @@ const Omar = {
     location: "🌍 Bolivia",
     currentFocus: ["DeFi", AI Agent, Privacy, DeFiLlama, "Smart Contracts", "Cybersecurity", Protocols ERC, Vercel],
     workingOn: "Building the next generation of secure dApps",
-    learning: ["Rust", "Go", Yellow Network, ENS, Uniswap, "Advanced Cryptography", ISO],
+    learning: ["Rust", "Go", Yellow Network, ENS, Uniswap, "Advanced Cryptography", ISO, Vercel SDK AI],
     askMeAbout: ["Solidity", "Chainlink", "web3", "Ethical Hacking", "Blockchain"],
     funFact: "I debug smart contracts and hunt vulnerabilities for fun! 🐛🔍",
     goals2024: "Contribute to major DeFi protocols & launch my own dApp",
