@@ -22,9 +22,10 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
-      - name: Commit the displayed chart if changed
+      - name: Commit the displayed charts if changed
         run: |
-          git add profile-3d-contrib/profile-south-season-animate.svg
+          git add profile-3d-contrib/profile-south-season-animate.svg \
+                  profile-3d-contrib/profile-night-view.svg
           if ! git diff --cached --quiet; then
             git -c user.name="github-actions[bot]" \
                 -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \

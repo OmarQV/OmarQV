@@ -23,9 +23,9 @@ link to individual projects.
 - Technology logos come from `skillicons.dev`; social badges come from
   `shields.io`.
 - `.github/workflows/profile-3d.yml` uses
-  `yoshi389111/github-profile-3d-contrib` to generate the Southern Hemisphere
-  3D contribution graph each day. It commits only the SVG displayed in the
-  README and uses the repository's built-in `GITHUB_TOKEN`.
+  `yoshi389111/github-profile-3d-contrib` to generate the 3D contribution
+  graph each day. It commits a night-view SVG for dark mode and a Southern
+  Hemisphere seasonal SVG for light mode, using the built-in `GITHUB_TOKEN`.
 - The activity graphic reports contributions, not ability. Real-world awards
   and roles are stated separately in the Milestones section.
 

@@ -102,7 +102,11 @@ La Paz, Bolivia 🇧🇴</p>
 
 <div align="center">
 
-<img src="./profile-3d-contrib/profile-south-season-animate.svg" width="100%" alt="Animated 3D visualization of Omar's GitHub contributions, using Southern Hemisphere seasons" />
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/profile-night-view.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/profile-south-season-animate.svg" />
+  <img src="./profile-3d-contrib/profile-south-season-animate.svg" width="100%" alt="3D visualization of Omar's GitHub contributions" />
+</picture>
 
 <sub>Contribution calendar generated daily by <a href="https://github.com/yoshi389111/github-profile-3d-contrib">GitHub Profile 3D Contrib</a>. Activity is one signal, not a measure of expertise.</sub>
 
