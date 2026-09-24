@@ -4,10 +4,22 @@
   "tagline": "AI AGENTS × WEB3 × INFORMATION SECURITY",
   "credential_id": "OQV-2026",
   "rows": [
-    ["ROLE", "Software Engineer · Builder"],
-    ["BASE", "La Paz, Bolivia"],
-    ["TRACK", "Informatics · Information Security (UMSA)"],
-    ["METHOD", "Build · Trace · Verify"]
+    [
+      "ROLE",
+      "Software Engineer · Builder"
+    ],
+    [
+      "BASE",
+      "La Paz, Bolivia"
+    ],
+    [
+      "TRACK",
+      "Informatics · Information Security (UMSA)"
+    ],
+    [
+      "METHOD",
+      "Build · Trace · Verify"
+    ]
   ],
   "status": "BUILDING",
   "latest_project": "Vector52",
@@ -17,6 +29,108 @@
     "public_repos": "—",
     "followers": "—"
   },
-  "live_repos": 4,
-  "exclude_repos": ["OmarQV"]
+  "timeline": [
+    {
+      "year": "2025",
+      "title": "Web3 builder · 20+ hackathons & programs",
+      "colors": [
+        "accent2",
+        "accent"
+      ],
+      "items": [
+        [
+          "Avalanche",
+          "Kredentia",
+          "document credentials on-chain"
+        ],
+        [
+          "ETH Bolivia",
+          "Cocadena",
+          "coca-leaf supply-chain traceability"
+        ],
+        [
+          "Cook 3",
+          "Lotes Chain Bolivia",
+          "fractional land tokenization"
+        ],
+        [
+          "ICP WCHL25",
+          "CoFi",
+          "conversational DeFi copilot"
+        ],
+        [
+          "Stacks",
+          "sBTC ChatBot",
+          "natural language → Clarity"
+        ],
+        [
+          "Devconnect ARG",
+          "LlamaRollup",
+          "AI yield agent on Scroll"
+        ],
+        [
+          "CochaBlock",
+          "AIni Pay",
+          "AI payments · EVM + Celestia",
+          true
+        ]
+      ]
+    },
+    {
+      "year": "2026",
+      "title": "AI agents × payments × security",
+      "colors": [
+        "purple",
+        "pink"
+      ],
+      "items": [
+        [
+          "ETHGlobal HackMoney",
+          "YellowMeter · ENSVault",
+          "micropayments · Uniswap v4 hook"
+        ],
+        [
+          "Chainlink",
+          "AetherGuard Nexus",
+          "pay-per-query verifiable intel"
+        ],
+        [
+          "LabLab.ai · Arc",
+          "Pay-per-Thought",
+          "market for agent reasoning"
+        ],
+        [
+          "Stellar Agentic AI",
+          "Nova Registry Agent",
+          "agent that pays via x402"
+        ],
+        [
+          "Stellar · DoraHacks",
+          "AndesMaaS 3.0",
+          "gamified mobility for La Paz"
+        ],
+        [
+          "ETH México",
+          "FRONTERA",
+          "remittances w/ on-chain consent"
+        ],
+        [
+          "UNESCO Youth",
+          "RumorLab",
+          "rehearsing against misinformation"
+        ],
+        [
+          "ETH Bolivia Buildathon",
+          "Vector52",
+          "reproducible chain forensics",
+          true
+        ],
+        [
+          "Now",
+          "Stellar Elite · ExpoVia",
+          "bootcamp · FIPAZ pilot · 8th sem."
+        ]
+      ]
+    }
+  ]
 }

@@ -1,14 +1,15 @@
 # Profile maintenance (OQV 2.0)
 
-Structure: **credential → whoami → proof of work → milestones → build log →
-live repos → stack → activity → background → contact.**
+Structure: **credential → whoami → milestones → build log → stack →
+activity → background → contact**, separated by an animated gradient divider.
 
 ## What updates itself
 
 | Piece | Source | Workflow |
 | :-- | :-- | :-- |
 | `assets/credential-dark.svg` / `-light.svg` | `scripts/render_profile.py` + `profile.json` + GitHub API (avatar, public repos, followers) | `update-profile.yml`, daily 05:41 La Paz |
-| `<!--LIVE:START-->` block in README | Latest pushed public repos (no forks, no archived, no `OmarQV`) | same |
+| `assets/buildlog-dark.svg` / `-light.svg` | `timeline` in `profile.json` | same |
+| `assets/divider.svg` | fixed brand gradient | same |
 | `profile-3d-contrib/*.svg` | yoshi389111/github-profile-3d-contrib | `profile-3d.yml`, daily |
 
 Both workflows use only the built-in `GITHUB_TOKEN`; no secrets to configure.
@@ -20,10 +21,10 @@ shows as a broken image.
 
 - **Card text** (role, track, status, latest project, hackathon count, 1st
   places): `profile.json`. Pushing it re-renders the card automatically.
-- **Proof of work**: the six project cells in `README.md`. Each has an
-  `<!-- add: [Repo](...) -->` comment. Replace it with real repo/demo links.
 - **Milestones**: only verifiable wins or roles; team wins stay credited as team wins.
-- **Build log**: add a line when you finish a hackathon.
+- **Build log**: add an item to `timeline` in `profile.json`
+  (`[event, project, description]`, add `true` as a 4th value for a 1st place).
+  Push, and the workflow redraws the SVG.
 
 Run locally without network: `python scripts/render_profile.py --offline`.
 
@@ -31,7 +32,7 @@ Run locally without network: `python scripts/render_profile.py --offline`.
 
 - **Bio:** `Building verifiable systems · AI agents × Web3 × security · La Paz, Bolivia`
 - **Website:** `https://omidev.vercel.app/` · **Location:** `La Paz, Bolivia`
-- **Pins (6):** the same projects as *Proof of work*, each with a one-line
+- **Pins (6):** your strongest projects (Vector52, Pay-per-Thought, AIni Pay, AndesMaaS…), each with a one-line
   description, 3–5 topics and the demo URL in the repo's *Website* field.
 
 ## Deliberately not used

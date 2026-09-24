@@ -1,7 +1,7 @@
 <!-- OmarQV · GitHub profile · OQV 2.0 (Sept 2026)
-     The credential card and the LIVE block are regenerated daily by
-     .github/workflows/update-profile.yml → scripts/render_profile.py.
-     Edit static card fields in profile.json, not in the SVG. -->
+     assets/*.svg are regenerated daily by .github/workflows/update-profile.yml
+     → scripts/render_profile.py. Edit card fields and the build log in
+     profile.json, not in the SVGs. -->
 
 <div align="center">
 
@@ -11,7 +11,7 @@
   <img src="./assets/credential-dark.svg" width="100%" alt="OQV smart developer credential: Omar Quispe Vargas, AI agents × Web3 × information security, La Paz, Bolivia" />
 </picture>
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=16&duration=2800&pause=1100&color=58A6FF&center=true&vCenter=true&width=760&lines=Building+systems+that+can+be+explained+and+verified.;AI+agents+%C3%97+programmable+money+%C3%97+digital+evidence.;Security-first+engineering+from+Bolivia+%F0%9F%87%A7%F0%9F%87%B4" alt="Building systems that can be explained and verified" />
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=16&duration=2800&pause=1100&color=A371F7&center=true&vCenter=true&width=760&lines=Building+systems+that+can+be+explained+and+verified.;AI+agents+%C3%97+programmable+money+%C3%97+digital+evidence.;Security-first+engineering+from+Bolivia+%F0%9F%87%A7%F0%9F%87%B4" alt="Building systems that can be explained and verified" />
 
 </div>
 
@@ -27,85 +27,7 @@ $ ls ./current_focus
 agent-payments/   blockchain-forensics/   x402/   secure-by-design/   dev-communities/
 ```
 
----
-
-## 🔬 Proof of work
-
-<table>
-<tr>
-<td width="50%" valign="top">
-
-### 🔎 Vector52
-**Blockchain forensics you can reproduce.** Turns a public address into a map of inflows, outflows and counterparties, with evidence a third party can re-check. Built for fraud and phishing victims, investigators and compliance teams.
-
-🥇 **1st place** · Ethereum Bolivia Buildathon 2026 · then ETHOnline 2026
-
-`Avalanche` `x402` `Reown` `MCP` `Supabase` `AI agent`
-<!-- add: [Repo](https://github.com/...) · [Demo](https://...) -->
-
-</td>
-<td width="50%" valign="top">
-
-### 🧠 Pay-per-Thought
-**A market for agent reasoning.** AI agents pay per unit of computation in real time, with signed intents and on-chain reputation. 111 verified on-chain transactions and a verified `Reputation.vy` contract.
-
-LabLab.ai · Arc hackathon 2026
-
-`Arc` `Circle Nanopayments` `x402` `EIP-712` `Vyper` `Gemini`
-<!-- add: [Repo](https://github.com/...) · [Demo](https://...) -->
-
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-### ⚡ AIni Pay
-**Crypto payments in plain language.** A conversational assistant that turns “send 20 USDC to…” into a validated transaction across EVM networks and a Celestia rollup.
-
-🥇 **1st place** · CochaBlock Challenge: Destino Devconnect 2025
-
-`EVM` `Celestia` `Rollkit` `Reown` `LLM`
-<!-- add: [Repo](https://github.com/...) -->
-
-</td>
-<td width="50%" valign="top">
-
-### 🚠 AndesMaaS 3.0
-**Gamified mobility for one of the world’s highest cities.** Citizens act as oracles for blockades, marches and traffic in La Paz and are rewarded through Stellar.
-
-Stellar · DoraHacks 2026 · [Live demo](https://andesmaas-3-0.vercel.app/app) · [Video](https://youtu.be/8ZjMN5mYSgs)
-
-`Stellar` `Soroban` `DePIN` `Next.js`
-
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-### 🎵 Nova Registry Agent
-**An agent that pays its own way.** An autonomous agent certifies AI-generated music: when it gets an HTTP 402 it negotiates, pays on Stellar and finishes the registration without API keys.
-
-Stellar Hacks: Agentic AI 2026
-
-`Stellar` `Soroban` `x402` `Claude` `BullMQ`
-<!-- add: [Repo](https://github.com/...) -->
-
-</td>
-<td width="50%" valign="top">
-
-### 🧭 ExpoVia
-**Digital infrastructure for physical events.** Discovery, indoor navigation and business matching for trade fairs, piloting at FIPAZ 2026 in La Paz (Oct 28 – Nov 8).
-
-FIPAZ 2026 · pilot in progress
-
-`Expo` `React Native` `Node.js` `Dashboard`
-<!-- add: [Repo](https://github.com/...) -->
-
-</td>
-</tr>
-</table>
-
----
+<p align="center"><img src="./assets/divider.svg" width="100%" alt="" /></p>
 
 ## 🏆 Milestones & recognition
 
@@ -119,48 +41,17 @@ FIPAZ 2026 · pilot in progress
 
 <sub>Team achievements are credited as team wins. The Stellar role is contributor recognition, not a competition award.</sub>
 
----
+<p align="center"><img src="./assets/divider.svg" width="100%" alt="" /></p>
 
 ## 🗺️ Build log
 
-```text
-2025 ─┬─ Web3 builder: 20+ hackathons & programs
-      ├─ Avalanche · Kredentia ········· document credentials on-chain
-      ├─ ETH Bolivia · Cocadena ········ coca-leaf supply-chain traceability
-      ├─ Cook 3 · Lotes Chain Bolivia ·· fractional land tokenization (Mantle)
-      ├─ ICP WCHL25 · CoFi ············· conversational DeFi copilot
-      ├─ Stacks · sBTC ChatBot ········· natural language → Clarity contracts
-      ├─ Devconnect ARG · LlamaRollup ·· AI yield agent on Scroll
-      └─ CochaBlock · AIni Pay ········· 🥇 1st place
-                    │
-2026 ─┬─ AI agents × payments × security
-      ├─ ETHGlobal HackMoney ··········· YellowMeter · ENSVault · Uniswap v4 hook
-      ├─ Chainlink ····················· AetherGuard Nexus (pay-per-query CRE)
-      ├─ LabLab.ai · Arc ··············· Pay-per-Thought
-      ├─ Stellar Agentic AI ············ Nova Registry Agent
-      ├─ ETH México ···················· FRONTERA: remittances with on-chain consent
-      ├─ UNESCO Youth ·················· RumorLab: rehearsing against misinformation
-      ├─ ETH Bolivia Buildathon ········ Vector52 🥇 → ETHOnline 2026
-      └─ now ··························· Stellar Elite · ExpoVia pilot · 8th semester
-```
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/buildlog-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="./assets/buildlog-light.svg" />
+  <img src="./assets/buildlog-dark.svg" width="100%" alt="Build log. 2025: Kredentia, Cocadena, Lotes Chain Bolivia, CoFi, sBTC ChatBot, LlamaRollup, AIni Pay (1st place). 2026: YellowMeter, AetherGuard Nexus, Pay-per-Thought, Nova Registry Agent, AndesMaaS 3.0, FRONTERA, RumorLab, Vector52 (1st place), Stellar Elite and ExpoVia." />
+</picture>
 
----
-
-## 🛰️ Live from GitHub
-
-<!--LIVE:START-->
-
-| Repository | What it is | Language | Last push |
-| :-- | :-- | :-- | :-- |
-| [`vector52`](https://github.com/OmarQV/vector52) | — | Python | 2026-09-13 |
-| [`app-fipaz-demo`](https://github.com/OmarQV/app-fipaz-demo) | — | — | 2026-09-08 |
-| [`stellar-build`](https://github.com/OmarQV/stellar-build) | Stellar Elite | Python | 2026-09-04 |
-| [`EKOVOX`](https://github.com/OmarQV/EKOVOX) | — | — | 2026-09-01 |
-
-<sub>Auto-updated 2026-09-24 by <code>scripts/render_profile.py</code>.</sub>
-<!--LIVE:END-->
-
----
+<p align="center"><img src="./assets/divider.svg" width="100%" alt="" /></p>
 
 ## 🧰 Engineering stack
 
@@ -174,12 +65,12 @@ FIPAZ 2026 · pilot in progress
 
 | Practice | Tools & methods |
 | :--- | :--- |
-| **AI & agents** | Python · LangGraph · MCP · tool calling · x402 agent payments · Claude / Gemini |
-| **Blockchain** | Solidity · Vyper · Foundry · Hardhat · EVM · Stellar/Soroban · Avalanche · Wagmi · Viem |
-| **Web & mobile** | TypeScript · React · Next.js · Expo / React Native · Flutter · FastAPI · Supabase |
-| **Security** | Threat modeling · digital & on-chain forensics · smart-contract review · CTF practice (eJPT track) |
+| ![AI & agents](https://img.shields.io/badge/AI_%26_agents-8957e5?style=flat-square&logo=anthropic&logoColor=white) | Python · LangGraph · MCP · tool calling · x402 agent payments · Claude / Gemini |
+| ![Blockchain](https://img.shields.io/badge/Blockchain-1f6feb?style=flat-square&logo=ethereum&logoColor=white) | Solidity · Vyper · Foundry · Hardhat · EVM · Stellar/Soroban · Avalanche · Wagmi · Viem |
+| ![Web & mobile](https://img.shields.io/badge/Web_%26_mobile-bf3989?style=flat-square&logo=react&logoColor=white) | TypeScript · React · Next.js · Expo / React Native · Flutter · FastAPI · Supabase |
+| ![Security](https://img.shields.io/badge/Security-238636?style=flat-square&logo=hackthebox&logoColor=white) | Threat modeling · digital & on-chain forensics · smart-contract review · CTF practice (eJPT track) |
 
----
+<p align="center"><img src="./assets/divider.svg" width="100%" alt="" /></p>
 
 ## 📊 GitHub signal
 
@@ -195,7 +86,7 @@ FIPAZ 2026 · pilot in progress
 
 </div>
 
----
+<p align="center"><img src="./assets/divider.svg" width="100%" alt="" /></p>
 
 ## 🌎 Beyond the code
 
@@ -204,7 +95,7 @@ FIPAZ 2026 · pilot in progress
 - 👨‍🏫 Former teaching assistant in **Web Programming II** at UMSA.
 - 🤝 Active in Bolivia’s developer and Web3 communities through workshops, hackathons and event organizing.
 
----
+<p align="center"><img src="./assets/divider.svg" width="100%" alt="" /></p>
 
 ## 🤝 Let's connect
 
@@ -213,7 +104,6 @@ FIPAZ 2026 · pilot in progress
 [![Portfolio](https://img.shields.io/badge/Portfolio-omidev-111827?style=for-the-badge&logo=vercel&logoColor=white)](https://omidev.vercel.app/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Omar_Quispe_Vargas-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/omar-quispe-vargas-7b5601204/)
 [![X](https://img.shields.io/badge/X-@OmarQV2025-111827?style=for-the-badge&logo=x&logoColor=white)](https://x.com/OmarQV2025)
-[![Telegram](https://img.shields.io/badge/Telegram-@omar__q__v-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/omar_q_v)
 [![Email](https://img.shields.io/badge/Email-Say_hello-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:quispevargasomar@gmail.com)
 
 <br />

@@ -26,13 +26,13 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Render credential and live block
+      - name: Render credential, build log and divider
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python scripts/render_profile.py
       - name: Commit if changed
         run: |
-          git add assets/credential-dark.svg assets/credential-light.svg README.md
+          git add assets/*.svg
           if ! git diff --cached --quiet; then
             git -c user.name="github-actions[bot]" \
                 -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \

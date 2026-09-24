@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-"""Render the OQV smart credential (dark + light SVG) and refresh the live
-block of README.md.
+"""Render the OQV profile assets: smart credential and build log (dark + light
+SVG) plus the gradient divider.
 
 Standard library only, so it runs on a bare GitHub Actions runner.
 Every network call has a fallback: if GitHub is unreachable the card is still
@@ -34,11 +34,13 @@ PALETTES = {
         "bg1": "#0d1117", "bg2": "#111a2b", "panel": "#161b22", "border": "#30363d",
         "grid": "#1f6feb", "accent": "#58a6ff", "accent2": "#3fb950",
         "text": "#e6edf3", "muted": "#8b949e", "warn": "#d29922",
+        "purple": "#a371f7", "pink": "#f778ba", "orange": "#f0883e", "gold": "#e3b341",
     },
     "light": {
         "bg1": "#ffffff", "bg2": "#eef4fc", "panel": "#f6f8fa", "border": "#d0d7de",
         "grid": "#0969da", "accent": "#0969da", "accent2": "#1a7f37",
         "text": "#1f2328", "muted": "#59636e", "warn": "#9a6700",
+        "purple": "#8250df", "pink": "#bf3989", "orange": "#bc4c00", "gold": "#9a6700",
     },
 }
 
@@ -61,7 +63,6 @@ def collect() -> dict:
         "public_repos": CONFIG["fallback"]["public_repos"],
         "followers": CONFIG["fallback"]["followers"],
         "avatar": None,
-        "repos": [],
     }
     if OFFLINE:
         return data
@@ -76,15 +77,6 @@ def collect() -> dict:
         data["avatar"] = f"data:{ctype};base64,{base64.b64encode(body).decode()}"
     except Exception as exc:  # noqa: BLE001
         print(f"warn: avatar unavailable ({exc})", file=sys.stderr)
-    try:
-        repos = fetch(f"https://api.github.com/users/{USER}/repos?sort=pushed&per_page=40&type=owner")
-        skip = {n.lower() for n in CONFIG.get("exclude_repos", [])}
-        data["repos"] = [
-            r for r in repos
-            if not r.get("fork") and not r.get("archived") and r["name"].lower() not in skip
-        ][: CONFIG.get("live_repos", 4)]
-    except Exception as exc:  # noqa: BLE001
-        print(f"warn: repo list unavailable ({exc})", file=sys.stderr)
     return data
 
 
@@ -116,11 +108,16 @@ def render_card(theme: str, data: dict, today: dt.date) -> str:
                   f'<text x="120" y="182" text-anchor="middle" font-family="{SANS}" font-size="36" '
                   f'font-weight="700" fill="{p["accent"]}">{t(initials)}</text>')
 
+    hues = [p["accent"], p["purple"], p["accent2"], p["orange"]]
+    parts = CONFIG["tagline"].split(" × ")
+    tagline = f'<tspan fill="{p["muted"]}"> × </tspan>'.join(
+        f'<tspan fill="{hues[i % len(hues)]}">{t(w)}</tspan>' for i, w in enumerate(parts))
+
     rows = []
     for i, (k, v) in enumerate(CONFIG["rows"]):
         y = 184 + i * 25
         rows.append(
-            f'<text x="226" y="{y}" font-family="{MONO}" font-size="11.5" fill="{p["muted"]}" '
+            f'<text x="226" y="{y}" font-family="{MONO}" font-size="11.5" fill="{hues[i % len(hues)]}" '
             f'letter-spacing="1">{t(k)}</text>'
             f'<text x="306" y="{y}" font-family="{MONO}" font-size="12.5" fill="{p["text"]}">{t(v)}</text>')
 
@@ -134,7 +131,7 @@ def render_card(theme: str, data: dict, today: dt.date) -> str:
         cy = 118 + (i // 2) * 66
         stat_svg.append(
             f'<text x="{cx}" y="{cy}" font-family="{SANS}" font-size="26" font-weight="700" '
-            f'fill="{p["text"]}">{t(val)}</text>'
+            f'fill="{[p["accent"], p["purple"], p["pink"], p["gold"]][i]}">{t(val)}</text>'
             f'<text x="{cx}" y="{cy + 17}" font-family="{MONO}" font-size="9.5" letter-spacing="1" '
             f'fill="{p["muted"]}">{t(label)}</text>')
 
@@ -144,7 +141,9 @@ def render_card(theme: str, data: dict, today: dt.date) -> str:
 <desc id="desc">{t(CONFIG["tagline"])}. {t(" · ".join(v for _, v in CONFIG["rows"]))}. Status {t(CONFIG["status"])}, latest project {t(CONFIG["latest_project"])}.</desc>
 <defs>
   <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="{p["bg1"]}"/><stop offset="1" stop-color="{p["bg2"]}"/></linearGradient>
-  <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="{p["accent"]}"/><stop offset="1" stop-color="{p["accent2"]}"/></linearGradient>
+  <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="{p["accent"]}"/><stop offset=".5" stop-color="{p["purple"]}"/><stop offset="1" stop-color="{p["accent2"]}"/></linearGradient>
+  <linearGradient id="brand" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="{p["accent"]}"/><stop offset=".35" stop-color="{p["purple"]}"/><stop offset=".7" stop-color="{p["pink"]}"/><stop offset="1" stop-color="{p["orange"]}"/></linearGradient>
+  <linearGradient id="glow" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="{p["purple"]}" stop-opacity=".22"/><stop offset=".6" stop-color="{p["purple"]}" stop-opacity="0"/></linearGradient>
   <linearGradient id="scan" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="{p["accent"]}" stop-opacity="0"/><stop offset="1" stop-color="{p["accent"]}" stop-opacity=".16"/></linearGradient>
   <pattern id="grid" width="22" height="22" patternUnits="userSpaceOnUse"><path d="M22 0H0V22" fill="none" stroke="{p["grid"]}" stroke-opacity=".07"/></pattern>
   <clipPath id="av"><circle cx="120" cy="170" r="64"/></clipPath>
@@ -162,11 +161,13 @@ def render_card(theme: str, data: dict, today: dt.date) -> str:
 <g clip-path="url(#card)">
   <rect width="{W}" height="{H}" fill="url(#bg)"/>
   <rect width="{W}" height="{H}" fill="url(#grid)"/>
+  <rect width="{W}" height="{H}" fill="url(#glow)"/>
+  <rect x="0" y="0" width="{W}" height="4" fill="url(#brand)"/>
   <rect class="scan" x="0" y="0" width="{W}" height="60" fill="url(#scan)"/>
 </g>
-<rect x="1" y="1" width="{W-2}" height="{H-2}" rx="18" fill="none" stroke="{p["border"]}"/>
+<rect x="1" y="1" width="{W-2}" height="{H-2}" rx="18" fill="none" stroke="url(#brand)" stroke-opacity=".7" stroke-width="1.5"/>
 <path d="M18 1H90M1 18V90" stroke="{p["accent"]}" stroke-width="2" fill="none" transform="translate(0.5 0.5)"/>
-<path d="M{W-90} {H-1}H{W-18}M{W-1} {H-90}V{H-18}" stroke="{p["accent2"]}" stroke-width="2" fill="none"/>
+<path d="M{W-90} {H-1}H{W-18}M{W-1} {H-90}V{H-18}" stroke="{p["pink"]}" stroke-width="2" fill="none"/>
 
 <!-- header -->
 <text x="32" y="42" font-family="{MONO}" font-size="13" font-weight="700" letter-spacing="2" fill="{p["accent"]}">OQV://IDENTITY</text>
@@ -182,8 +183,8 @@ def render_card(theme: str, data: dict, today: dt.date) -> str:
 {avatar}
 
 <!-- identity -->
-<text x="224" y="112" font-family="{SANS}" font-size="27" font-weight="800" letter-spacing=".5" fill="{p["text"]}">{t(CONFIG["name"])}</text>
-<text x="226" y="138" font-family="{MONO}" font-size="12" font-weight="700" letter-spacing="1.2" fill="{p["accent"]}">{t(CONFIG["tagline"])}</text>
+<text x="224" y="112" font-family="{SANS}" font-size="27" font-weight="800" letter-spacing=".5" fill="url(#brand)">{t(CONFIG["name"])}</text>
+<text x="226" y="138" font-family="{MONO}" font-size="12" font-weight="700" letter-spacing="1.2">{tagline}</text>
 <line x1="226" y1="156" x2="610" y2="156" stroke="{p["border"]}" stroke-dasharray="2 4"/>
 {"".join(rows)}
 
@@ -204,31 +205,64 @@ def render_card(theme: str, data: dict, today: dt.date) -> str:
 """
 
 
-# --------------------------------------------------------------------------- README live block
-def render_live(data: dict, today: dt.date) -> str:
-    lines = ["", "", "| Repository | What it is | Language | Last push |", "| :-- | :-- | :-- | :-- |"]
-    if data["repos"]:
-        for r in data["repos"]:
-            desc = (r.get("description") or "—").replace("|", "\\|")
-            if len(desc) > 90:
-                desc = desc[:87].rstrip() + "…"
-            lines.append(
-                f"| [`{r['name']}`]({r['html_url']}) | {desc} | {r.get('language') or '—'} "
-                f"| {r['pushed_at'][:10]} |")
-    else:
-        lines.append("| _syncing…_ | Filled in automatically by the daily profile workflow. | — | — |")
-    lines += ["", f"<sub>Auto-updated {today.isoformat()} by <code>scripts/render_profile.py</code>.</sub>", ""]
-    return "\n".join(lines)
+# --------------------------------------------------------------------------- build log
+def render_timeline(theme: str) -> str:
+    p = PALETTES[theme]
+    t = lambda s: escape(str(s))  # noqa: E731
+    lanes = CONFIG["timeline"]
+    W, top, row, head = 880, 64, 27, 46
+    H = top + sum(head + len(l["items"]) * row + 22 for l in lanes) - 14
+    out, y = [], top
+    for li, lane in enumerate(lanes):
+        c1, c2 = p[lane["colors"][0]], p[lane["colors"][1]]
+        gid = f"lane{li}"
+        n = len(lane["items"])
+        y0, y1 = y + 18, y + head + (n - 1) * row + 4
+        out.append(
+            f'<linearGradient id="{gid}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="{c1}"/>'
+            f'<stop offset="1" stop-color="{c2}"/></linearGradient>'
+            f'<rect x="84" y="{y0}" width="3" height="{y1 - y0}" rx="1.5" fill="url(#{gid})"/>'
+            f'<rect x="24" y="{y + 2}" width="52" height="24" rx="12" fill="{c1}" fill-opacity=".16" stroke="{c1}" stroke-opacity=".6"/>'
+            f'<text x="50" y="{y + 19}" text-anchor="middle" font-family="{MONO}" font-size="12.5" font-weight="700" fill="{c1}">{t(lane["year"])}</text>'
+            f'<circle cx="85.5" cy="{y + 14}" r="7" fill="{p["bg1"]}" stroke="{c1}" stroke-width="3"/>'
+            f'<text x="104" y="{y + 19}" font-family="{SANS}" font-size="15" font-weight="700" fill="{p["text"]}">{t(lane["title"])}</text>')
+        for k, item in enumerate(lane["items"]):
+            event, project, desc = item[:3]
+            win = len(item) > 3 and item[3]
+            iy = y + head + k * row
+            frac = k / max(n - 1, 1)
+            col = c1 if frac < .5 else c2
+            out.append(
+                f'<circle cx="85.5" cy="{iy - 4}" r="4.5" fill="{col}"/>'
+                f'<text x="104" y="{iy}" font-family="{MONO}" font-size="12" font-weight="700" fill="{col}">{t(event)}</text>'
+                f'<text x="316" y="{iy}" font-family="{SANS}" font-size="13" font-weight="600" fill="{p["text"]}">{t(project)}</text>'
+                f'<text x="516" y="{iy}" font-family="{MONO}" font-size="11.5" fill="{p["muted"]}">{t(desc)}</text>')
+            if win:
+                out.append(
+                    f'<rect x="{W - 84}" y="{iy - 15}" width="58" height="20" rx="10" fill="{p["gold"]}" fill-opacity=".18" stroke="{p["gold"]}"/>'
+                    f'<text x="{W - 55}" y="{iy - 1}" text-anchor="middle" font-family="{MONO}" font-size="11" font-weight="700" fill="{p["gold"]}">1ST</text>')
+        y += head + n * row + 22
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-labelledby="bt">
+<title id="bt">Build log: hackathons and projects by year</title>
+<defs><linearGradient id="bb" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="{p["accent"]}"/><stop offset=".35" stop-color="{p["purple"]}"/><stop offset=".7" stop-color="{p["pink"]}"/><stop offset="1" stop-color="{p["orange"]}"/></linearGradient></defs>
+<rect x="1" y="1" width="{W-2}" height="{H-2}" rx="16" fill="{p["bg1"]}" stroke="{p["border"]}"/>
+<rect x="1" y="1" width="{W-2}" height="4" rx="2" fill="url(#bb)"/>
+<text x="24" y="38" font-family="{MONO}" font-size="12" font-weight="700" letter-spacing="2" fill="{p["accent"]}">OQV://BUILD_LOG</text>
+<text x="{W-24}" y="38" text-anchor="end" font-family="{MONO}" font-size="11" letter-spacing="1" fill="{p["muted"]}">EVENT · PROJECT · WHAT IT DOES</text>
+{"".join(out)}
+</svg>
+"""
 
 
-def update_readme(block: str) -> None:
-    readme = ROOT / "README.md"
-    text = readme.read_text(encoding="utf-8")
-    pattern = re.compile(r"(<!--LIVE:START-->)(.*?)(<!--LIVE:END-->)", re.S)
-    if not pattern.search(text):
-        print("warn: LIVE markers not found in README.md", file=sys.stderr)
-        return
-    readme.write_text(pattern.sub(lambda m: m.group(1) + block + m.group(3), text), encoding="utf-8")
+def render_divider() -> str:
+    return """<svg xmlns="http://www.w3.org/2000/svg" width="880" height="12" viewBox="0 0 880 12" role="presentation">
+<defs><linearGradient id="d" x1="0" y1="0" x2="1" y2="0" spreadMethod="reflect">
+<stop offset="0" stop-color="#58a6ff"/><stop offset=".33" stop-color="#a371f7"/><stop offset=".66" stop-color="#f778ba"/><stop offset="1" stop-color="#3fb950"/>
+<animate attributeName="x1" values="0;1;0" dur="8s" repeatCount="indefinite"/><animate attributeName="x2" values="1;2;1" dur="8s" repeatCount="indefinite"/>
+</linearGradient></defs>
+<rect x="0" y="4" width="880" height="4" rx="2" fill="url(#d)"/>
+</svg>
+"""
 
 
 def main() -> None:
@@ -238,10 +272,10 @@ def main() -> None:
     assets.mkdir(exist_ok=True)
     for theme in PALETTES:
         (assets / f"credential-{theme}.svg").write_text(render_card(theme, data, today), encoding="utf-8")
-    if not OFFLINE:
-        update_readme(render_live(data, today))
-    print(f"rendered credential for {USER}: repos={data['public_repos']} followers={data['followers']} "
-          f"avatar={'yes' if data['avatar'] else 'initials'} live_repos={len(data['repos'])}")
+        (assets / f"buildlog-{theme}.svg").write_text(render_timeline(theme), encoding="utf-8")
+    (assets / "divider.svg").write_text(render_divider(), encoding="utf-8")
+    print(f"rendered profile assets for {USER}: repos={data['public_repos']} "
+          f"followers={data['followers']} avatar={'yes' if data['avatar'] else 'initials'}")
 
 
 if __name__ == "__main__":
