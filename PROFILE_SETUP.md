@@ -12,12 +12,15 @@ profile sidebar and pinned repositories are separate account settings.
 
 ## Pinned repositories
 
-Start with [`vector52`](https://github.com/OmarQV/vector52) and add only
-repositories whose README, description and current state you want visitors to
-judge. Good candidates to review next are `stellar-build`, `auditchain` and
-`cocadena-smart-contract`. Pay-per-Thought and AIni Pay currently have working
-project/demo links in the profile, but no confirmed public repository on this
-account to pin.
+Start with [`vector52`](https://github.com/OmarQV/vector52). Its public README
+documents the project. Most other recent repositories have no README yet, so
+prepare those before pinning them. In particular, `omidev` and `stellar-build`
+could become strong pins after adding a clear description, setup instructions,
+screenshots or a demo, and an honest current status. Do not fill six slots with
+old coursework merely to use every slot.
+
+Pay-per-Thought and AIni Pay currently have working project/demo links in the
+profile, but no confirmed public repository on this account to pin.
 
 Use GitHub's **Customize your pins** control on the profile page. GitHub pins
 cannot be changed by editing this repository.
