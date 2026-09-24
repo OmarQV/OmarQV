@@ -152,7 +152,10 @@ FIPAZ 2026 · pilot in progress
 
 | Repository | What it is | Language | Last push |
 | :-- | :-- | :-- | :-- |
-| _syncing…_ | Filled in automatically by the daily profile workflow. | — | — |
+| [`vector52`](https://github.com/OmarQV/vector52) | — | Python | 2026-09-13 |
+| [`app-fipaz-demo`](https://github.com/OmarQV/app-fipaz-demo) | — | — | 2026-09-08 |
+| [`stellar-build`](https://github.com/OmarQV/stellar-build) | Stellar Elite | Python | 2026-09-04 |
+| [`EKOVOX`](https://github.com/OmarQV/EKOVOX) | — | — | 2026-09-01 |
 
 <sub>Auto-updated 2026-09-24 by <code>scripts/render_profile.py</code>.</sub>
 <!--LIVE:END-->
