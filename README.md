@@ -4,9 +4,6 @@
 -->
 
 <div align="center">
-
-# `OMAR // QV`
-
 ### Secure Systems × AI Agents × Web3
 
 <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&size=17&duration=2600&pause=900&color=58A6FF&center=true&vCenter=true&width=650&lines=Building+systems+that+can+be+verified.;Full-stack+engineering+with+a+security-first+mindset.;Exploring+AI+agents%2C+Web3+and+digital+forensics." alt="Dynamic introduction" />
