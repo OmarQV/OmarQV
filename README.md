@@ -3,8 +3,8 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="assets/hero-mobile-dark.svg">
-  <source media="(prefers-color-scheme: light) and (max-width: 600px)" srcset="assets/hero-mobile-light.svg">
+  <source media="(prefers-color-scheme: dark) and (max-width: 800px)" srcset="assets/hero-mobile-dark.svg">
+  <source media="(prefers-color-scheme: light) and (max-width: 800px)" srcset="assets/hero-mobile-light.svg">
   <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/hero-light.svg">
   <img src="assets/hero-dark.svg" width="100%" alt="Omar Quispe Vargas — building verifiable software at the intersection of AI agents, Web3 and security" />
@@ -83,8 +83,8 @@ My current questions: **How can agents transact with clear limits? How can a blo
 
 <div align="center">
 <picture>
-  <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="assets/footprint-mobile-dark.svg">
-  <source media="(prefers-color-scheme: light) and (max-width: 600px)" srcset="assets/footprint-mobile-light.svg">
+  <source media="(prefers-color-scheme: dark) and (max-width: 800px)" srcset="assets/footprint-mobile-dark.svg">
+  <source media="(prefers-color-scheme: light) and (max-width: 800px)" srcset="assets/footprint-mobile-light.svg">
   <source media="(prefers-color-scheme: dark)" srcset="assets/footprint-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/footprint-light.svg">
   <img src="assets/footprint-dark.svg" width="100%" alt="Language footprint across four selected public repositories, generated from GitHub's Languages API" />
