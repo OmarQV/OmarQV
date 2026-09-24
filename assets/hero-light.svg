@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="470" viewBox="0 0 1120 470" role="img" aria-labelledby="title description">
+  <title id="title">Omar Quispe Vargas — OQV</title>
+  <desc id="description">Developer profile. AI agents, Web3 and security. Build, trace, verify.</desc>
+  <defs>
+    <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M 28 0 L 0 0 0 28" fill="none" stroke="#CFDFE8" stroke-width="0.7" opacity="0.35"/>
+    </pattern>
+    <linearGradient id="wash" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#EAF3F8"/>
+    </linearGradient>
+    <linearGradient id="orbit" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#087B74"/>
+      <stop offset="1" stop-color="#365F9E"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-15%" width="120%" height="135%">
+      <feDropShadow dx="0" dy="8" stdDeviation="14" flood-color="#A1BCCB" flood-opacity="0.22"/>
+    </filter>
+    <clipPath id="orbit-clip"><rect x="686" y="72" width="406" height="354" rx="13"/></clipPath>
+  </defs>
+  <style>
+    text { font-family: 'Segoe UI', Arial, sans-serif; }
+    .mono { font-family: 'Cascadia Code', 'Consolas', monospace; }
+    @media (prefers-reduced-motion: reduce) { .motion { display: none; } }
+  </style>
+
+  <rect width="1120" height="470" rx="22" fill="#EEF5F9"/>
+  <rect width="1120" height="470" rx="22" fill="url(#grid)"/>
+  <rect x="18" y="18" width="1084" height="434" rx="17" fill="none" stroke="#C5D9E5"/>
+  <rect x="18" y="18" width="1084" height="5" rx="2.5" fill="url(#orbit)"/>
+
+  <circle cx="43" cy="46" r="5" fill="#087B74"/>
+  <circle class="motion" cx="43" cy="46" r="5" fill="#087B74" opacity="0.7">
+    <animate attributeName="r" values="5;10;5" dur="2.6s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.7;0;0.7" dur="2.6s" repeatCount="indefinite"/>
+  </circle>
+  <text class="mono" x="58" y="50" fill="#4A6478" font-size="12" letter-spacing="2.2">OQV / DEVELOPER PROFILE</text>
+  <text class="mono" x="1073" y="50" fill="#4A6478" text-anchor="end" font-size="12" letter-spacing="1.1">LA PAZ, BOLIVIA / ONLINE</text>
+
+  <rect x="28" y="72" width="638" height="354" rx="13" fill="url(#wash)" stroke="#C5D9E5" filter="url(#shadow)"/>
+  <path d="M 51 96 h 88" stroke="#087B74" stroke-width="3" stroke-linecap="round"/>
+  <text class="mono" x="52" y="126" fill="#087B74" font-size="13" font-weight="700" letter-spacing="2.2">BUILD / TRACE / VERIFY</text>
+
+  <text x="49" y="199" fill="#14283B" font-size="65" font-weight="800" letter-spacing="-2.2">OMAR</text>
+  <text x="49" y="263" fill="#14283B" font-size="55" font-weight="800" letter-spacing="-2">QUISPE VARGAS</text>
+  <path d="M 52 282 h 568" stroke="#C5D9E5" stroke-width="1"/>
+  <text class="mono" x="52" y="309" fill="#365F9E" font-size="14" font-weight="700" letter-spacing="1.1">AI AGENTS  ×  WEB3  ×  SECURITY</text>
+  <text x="52" y="341" fill="#4A6478" font-size="17">I build systems whose decisions can be traced</text>
+  <text x="52" y="365" fill="#4A6478" font-size="17">and whose results can be verified.</text>
+  <rect x="52" y="385" width="265" height="24" rx="12" fill="#EAF3F8" stroke="#C5D9E5"/>
+  <text class="mono" x="65" y="401" fill="#087B74" font-size="10" font-weight="700" letter-spacing="0.7">INFORMATION SECURITY / UMSA</text>
+  <text class="mono" x="620" y="401" fill="#4A6478" font-size="11" text-anchor="end">ID: OQV://001</text>
+
+  <rect x="686" y="72" width="406" height="354" rx="13" fill="#FFFFFF" stroke="#C5D9E5" filter="url(#shadow)"/>
+  <g clip-path="url(#orbit-clip)">
+    <rect x="686" y="72" width="406" height="354" fill="url(#grid)" opacity="0.8"/>
+    <circle cx="889" cy="248" r="132" fill="none" stroke="#C5D9E5" stroke-width="1" stroke-dasharray="3 7"/>
+    <circle cx="889" cy="248" r="109" fill="none" stroke="#CFDFE8" stroke-width="1.5"/>
+    <circle cx="889" cy="248" r="78" fill="none" stroke="#C5D9E5" stroke-width="13" opacity="0.65"/>
+    <circle cx="889" cy="248" r="78" fill="none" stroke="url(#orbit)" stroke-width="13" stroke-dasharray="196 295" stroke-linecap="round" transform="rotate(-105 889 248)"/>
+    <circle cx="889" cy="248" r="52" fill="#EAF3F8" stroke="#087B74" stroke-width="1.5"/>
+    <text class="mono" x="889" y="257" fill="#14283B" text-anchor="middle" font-size="30" font-weight="800" letter-spacing="2">OQV</text>
+    <g class="motion">
+      <path d="M 889 116 V 148" stroke="#087B74" stroke-width="2" opacity="0.65"/>
+      <circle cx="889" cy="116" r="5" fill="#087B74"/>
+      <animateTransform attributeName="transform" type="rotate" from="0 889 248" to="360 889 248" dur="18s" repeatCount="indefinite"/>
+    </g>
+    <path d="M 711 183 h 47 M 1020 183 h 47 M 711 313 h 47 M 1020 313 h 47" stroke="#C5D9E5"/>
+    <text class="mono" x="718" y="166" fill="#4A6478" font-size="10" letter-spacing="1">01 / BUILD</text>
+    <text class="mono" x="992" y="166" fill="#4A6478" font-size="10" letter-spacing="1">02 / TRACE</text>
+    <text class="mono" x="719" y="334" fill="#4A6478" font-size="10" letter-spacing="1">03 / VERIFY</text>
+    <text class="mono" x="982" y="334" fill="#4A6478" font-size="10" letter-spacing="1">04 / SHIP</text>
+    <rect class="motion" x="700" y="116" width="378" height="1.5" fill="#087B74" opacity="0.45">
+      <animate attributeName="y" values="116;402;116" dur="8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.45;0" dur="8s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <text class="mono" x="43" y="447" fill="#4A6478" font-size="10" letter-spacing="1.4">SECURE SYSTEMS · PROGRAMMABLE VALUE · DIGITAL EVIDENCE</text>
+  <text class="mono" x="1075" y="447" fill="#087B74" text-anchor="end" font-size="10" letter-spacing="1">GITHUB.COM/OMARQV</text>
+</svg>

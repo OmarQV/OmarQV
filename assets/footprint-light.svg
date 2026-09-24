@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="350" viewBox="0 0 1120 350" role="img" aria-labelledby="title desc">
+<title id="title">OQV code footprint</title>
+<desc id="desc">Language bytes in four selected public repositories, generated from the GitHub Languages API.</desc>
+<style>text{font-family:Segoe UI,Arial,sans-serif}.mono{font-family:Cascadia Code,Consolas,monospace}</style>
+<rect width="1120" height="350" rx="18" fill="#EEF5F9"/>
+<rect x="18" y="18" width="1084" height="314" rx="12" fill="#FFFFFF" stroke="#C5D9E5"/>
+<circle cx="48" cy="54" r="5" fill="#087B74"/>
+<text class="mono" x="63" y="59" fill="#087B74" font-size="13" font-weight="700" letter-spacing="1.4">OQV / CODE FOOTPRINT</text>
+<text class="mono" x="1074" y="59" text-anchor="end" fill="#4A6478" font-size="11" letter-spacing="0.8">4 SELECTED PUBLIC REPOSITORIES</text>
+<path d="M 44 78 H 1076" stroke="#C5D9E5"/>
+<text class="mono" x="47" y="116" fill="#14283B" font-size="13" font-weight="700">Python</text>
+<rect x="257" y="104" width="676" height="14" rx="7" fill="#DBE8EF"/>
+<rect x="257" y="104" width="676" height="14" rx="7" fill="#E9B85E"/>
+<text class="mono" x="1073" y="116" text-anchor="end" fill="#14283B" font-size="13" font-weight="700">75.3%</text>
+<text class="mono" x="47" y="158" fill="#14283B" font-size="13" font-weight="700">CSS</text>
+<rect x="257" y="146" width="676" height="14" rx="7" fill="#DBE8EF"/>
+<rect x="257" y="146" width="78" height="14" rx="7" fill="#9B82D4"/>
+<text class="mono" x="1073" y="158" text-anchor="end" fill="#14283B" font-size="13" font-weight="700">8.7%</text>
+<text class="mono" x="47" y="200" fill="#14283B" font-size="13" font-weight="700">TypeScript</text>
+<rect x="257" y="188" width="676" height="14" rx="7" fill="#DBE8EF"/>
+<rect x="257" y="188" width="63" height="14" rx="7" fill="#5A98E3"/>
+<text class="mono" x="1073" y="200" text-anchor="end" fill="#14283B" font-size="13" font-weight="700">7.0%</text>
+<text class="mono" x="47" y="242" fill="#14283B" font-size="13" font-weight="700">Solidity</text>
+<rect x="257" y="230" width="676" height="14" rx="7" fill="#DBE8EF"/>
+<rect x="257" y="230" width="34" height="14" rx="7" fill="#56BBAF"/>
+<text class="mono" x="1073" y="242" text-anchor="end" fill="#14283B" font-size="13" font-weight="700">3.8%</text>
+<text class="mono" x="47" y="284" fill="#14283B" font-size="13" font-weight="700">JavaScript</text>
+<rect x="257" y="272" width="676" height="14" rx="7" fill="#DBE8EF"/>
+<rect x="257" y="272" width="27" height="14" rx="7" fill="#DBCF63"/>
+<text class="mono" x="1073" y="284" text-anchor="end" fill="#14283B" font-size="13" font-weight="700">3.0%</text>
+<path d="M 44 308 H 1076" stroke="#C5D9E5"/>
+<text class="mono" x="47" y="326" fill="#4A6478" font-size="10">GITHUB LANGUAGES API · BYTES OF CODE, NOT PROFICIENCY</text>
+<text class="mono" x="1073" y="326" text-anchor="end" fill="#087B74" font-size="10">BUILD · TRACE · VERIFY</text>
+</svg>

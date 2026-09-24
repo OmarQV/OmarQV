@@ -1,0 +1,34 @@
+name: Refresh profile footprint
+
+on:
+  schedule:
+    - cron: "17 8 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/render_profile.py"
+      - ".github/workflows/update-profile.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Render charts from public repositories
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 scripts/render_profile.py
+      - name: Commit chart changes
+        run: |
+          git add assets/footprint-dark.svg assets/footprint-light.svg \
+                  assets/footprint-mobile-dark.svg assets/footprint-mobile-light.svg
+          if ! git diff --cached --quiet; then
+            git -c user.name="github-actions[bot]" \
+                -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
+                commit -m "chore: refresh profile footprint"
+            git push
+          fi
