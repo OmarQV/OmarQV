@@ -93,114 +93,159 @@ def barcode(seed: str, x: float, y: float, h: float, color: str, width: float) -
     return "".join(out)
 
 
+HACK = {
+    "bg1": "#04100b", "bg2": "#0a2419", "green": "#3fb68b", "dim": "#16392b",
+    "text": "#c3e2d4", "muted": "#5b8c78", "cyan": "#6fb2b0", "amber": "#c4a46a",
+    "magenta": "#a98fb8", "red": "#c07078",
+}
+RAIN = "01ABCDEF0123456789アイウエオカキクケコサシスセソタチツテト#$%&<>/\\"
+
+
+def matrix_rain(W: int, H: int, color: str) -> str:
+    """Deterministic falling-glyph columns (no randomness → stable diffs)."""
+    out = []
+    seed = hashlib.sha256(f"{USER}-rain".encode()).digest() * 8
+    cols = W // 22
+    for c in range(cols):
+        b = seed[c * 5: c * 5 + 5]
+        x = 8 + c * 22 + b[0] % 6
+        n = 8 + b[1] % 10
+        glyphs = "".join(RAIN[(b[2] + k * 7 + b[3] * k) % len(RAIN)] for k in range(n))
+        dur = 7 + b[4] % 9
+        delay = -(b[2] % dur)
+        op = .05 + (b[3] % 5) / 70
+        tsp = "".join(
+            f'<tspan x="{x}" dy="15" fill-opacity="{(k + 1) / n:.2f}">{escape(g)}</tspan>'
+            for k, g in enumerate(glyphs))
+        out.append(
+            f'<text class="rain" style="animation-duration:{dur}s;animation-delay:{delay}s" '
+            f'y="{-n * 15}" font-size="12" fill="{color}" opacity="{op:.2f}">{tsp}</text>')
+    return "".join(out)
+
+
 def render_card(theme: str, data: dict, today: dt.date) -> str:
-    p = PALETTES[theme]
+    # Hacker terminal look for both themes: a terminal is dark by nature.
+    h = HACK
     W, H = 880, 336
     t = lambda s: escape(str(s))  # noqa: E731
 
-    # avatar (photo or initials)
     initials = "".join(w[0] for w in CONFIG["name"].split()[:2])
     if data["avatar"]:
-        avatar = (f'<image href="{data["avatar"]}" x="56" y="106" width="128" height="128" '
-                  f'clip-path="url(#av)" preserveAspectRatio="xMidYMid slice"/>')
+        avatar = (f'<image href="{data["avatar"]}" x="56" y="110" width="128" height="128" '
+                  f'clip-path="url(#av)" preserveAspectRatio="xMidYMid slice"/>'
+                  f'<rect x="56" y="110" width="128" height="128" clip-path="url(#av)" fill="{h["green"]}" fill-opacity=".06"/>'
+                  )
     else:
-        avatar = (f'<circle cx="120" cy="170" r="64" fill="{p["panel"]}"/>'
-                  f'<text x="120" y="182" text-anchor="middle" font-family="{SANS}" font-size="36" '
-                  f'font-weight="700" fill="{p["accent"]}">{t(initials)}</text>')
+        avatar = (f'<circle cx="120" cy="174" r="64" fill="{h["bg2"]}"/>'
+                  f'<text x="120" y="187" text-anchor="middle" font-family="{MONO}" font-size="38" '
+                  f'font-weight="700" fill="{h["green"]}" filter="url(#glow)">{t(initials)}</text>')
 
-    hues = [p["accent"], p["purple"], p["accent2"], p["orange"]]
+    hues = [h["cyan"], h["amber"], h["green"], h["magenta"]]
     parts = CONFIG["tagline"].split(" × ")
-    tagline = f'<tspan fill="{p["muted"]}"> × </tspan>'.join(
-        f'<tspan fill="{hues[i % len(hues)]}">{t(w)}</tspan>' for i, w in enumerate(parts))
+    tagline = f'<tspan fill="{h["muted"]}"> :: </tspan>'.join(
+        f'<tspan fill="{hues[i % len(hues)]}">{t(w.replace(" ", "_"))}</tspan>' for i, w in enumerate(parts))
 
     rows = []
     for i, (k, v) in enumerate(CONFIG["rows"]):
-        y = 184 + i * 25
+        y = 190 + i * 24
         rows.append(
-            f'<text x="226" y="{y}" font-family="{MONO}" font-size="11.5" fill="{hues[i % len(hues)]}" '
-            f'letter-spacing="1">{t(k)}</text>'
-            f'<text x="306" y="{y}" font-family="{MONO}" font-size="12.5" fill="{p["text"]}">{t(v)}</text>')
+            f'<text x="226" y="{y}" font-family="{MONO}" font-size="12" fill="{h["muted"]}">'
+            f'<tspan fill="{hues[i % len(hues)]}">$</tspan> {t(k.lower())}</text>'
+            f'<text x="316" y="{y}" font-family="{MONO}" font-size="12.5" fill="{h["text"]}">{t(v)}</text>')
 
     stats = [
-        (data["public_repos"], "PUBLIC REPOS"), (data["followers"], "FOLLOWERS"),
-        (CONFIG["hackathons"], "HACKATHONS"), (CONFIG["first_places"], "1ST PLACES"),
+        (data["public_repos"], "PUBLIC_REPOS", h["cyan"]), (data["followers"], "FOLLOWERS", h["green"]),
+        (CONFIG["hackathons"], "HACKATHONS", h["magenta"]), (CONFIG["first_places"], "1ST_PLACES", h["amber"]),
     ]
     stat_svg = []
-    for i, (val, label) in enumerate(stats):
-        cx = 676 + (i % 2) * 96
-        cy = 118 + (i // 2) * 66
+    for i, (val, label, col) in enumerate(stats):
+        cx = 674 + (i % 2) * 96
+        cy = 124 + (i // 2) * 64
         stat_svg.append(
-            f'<text x="{cx}" y="{cy}" font-family="{SANS}" font-size="26" font-weight="700" '
-            f'fill="{[p["accent"], p["purple"], p["pink"], p["gold"]][i]}">{t(val)}</text>'
-            f'<text x="{cx}" y="{cy + 17}" font-family="{MONO}" font-size="9.5" letter-spacing="1" '
-            f'fill="{p["muted"]}">{t(label)}</text>')
+            f'<text x="{cx}" y="{cy}" font-family="{MONO}" font-size="25" font-weight="700" '
+            f'fill="{col}" filter="url(#glow)">{t(val)}</text>'
+            f'<text x="{cx}" y="{cy + 16}" font-family="{MONO}" font-size="9" letter-spacing=".5" '
+            f'fill="{h["muted"]}">{t(label)}</text>')
 
-    sync = today.strftime("%d %b %Y").upper()
+    digest = hashlib.sha256(f'{USER}{CONFIG["credential_id"]}{today}'.encode()).hexdigest()
+    sync = today.strftime("%Y-%m-%d")
+    name = t(CONFIG["name"])
     return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-labelledby="title desc">
-<title id="title">{t(CONFIG["name"])} — developer credential</title>
+<title id="title">{name} — developer credential</title>
 <desc id="desc">{t(CONFIG["tagline"])}. {t(" · ".join(v for _, v in CONFIG["rows"]))}. Status {t(CONFIG["status"])}, latest project {t(CONFIG["latest_project"])}.</desc>
 <defs>
-  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="{p["bg1"]}"/><stop offset="1" stop-color="{p["bg2"]}"/></linearGradient>
-  <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="{p["accent"]}"/><stop offset=".5" stop-color="{p["purple"]}"/><stop offset="1" stop-color="{p["accent2"]}"/></linearGradient>
-  <linearGradient id="brand" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="{p["accent"]}"/><stop offset=".35" stop-color="{p["purple"]}"/><stop offset=".7" stop-color="{p["pink"]}"/><stop offset="1" stop-color="{p["orange"]}"/></linearGradient>
-  <linearGradient id="glow" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="{p["purple"]}" stop-opacity=".22"/><stop offset=".6" stop-color="{p["purple"]}" stop-opacity="0"/></linearGradient>
-  <linearGradient id="scan" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="{p["accent"]}" stop-opacity="0"/><stop offset="1" stop-color="{p["accent"]}" stop-opacity=".16"/></linearGradient>
-  <pattern id="grid" width="22" height="22" patternUnits="userSpaceOnUse"><path d="M22 0H0V22" fill="none" stroke="{p["grid"]}" stroke-opacity=".07"/></pattern>
-  <clipPath id="av"><circle cx="120" cy="170" r="64"/></clipPath>
-  <clipPath id="card"><rect x="1" y="1" width="{W-2}" height="{H-2}" rx="18"/></clipPath>
+  <radialGradient id="bg" cx=".3" cy=".35" r="1"><stop offset="0" stop-color="{h["bg2"]}"/><stop offset="1" stop-color="{h["bg1"]}"/></radialGradient>
+  <radialGradient id="vig" cx=".5" cy=".5" r=".75"><stop offset=".6" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".65"/></radialGradient>
+  <linearGradient id="edge" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="{h["green"]}"/><stop offset=".5" stop-color="{h["cyan"]}"/><stop offset="1" stop-color="{h["magenta"]}"/></linearGradient>
+  <linearGradient id="sweep" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="{h["green"]}" stop-opacity="0"/><stop offset="1" stop-color="{h["green"]}" stop-opacity=".06"/></linearGradient>
+  <pattern id="scanlines" width="4" height="3" patternUnits="userSpaceOnUse"><rect width="4" height="1" fill="#000" fill-opacity=".2"/></pattern>
+  <filter id="glow" x="-20%" y="-40%" width="140%" height="180%"><feGaussianBlur stdDeviation="1" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <clipPath id="av"><circle cx="120" cy="174" r="64"/></clipPath>
+  <clipPath id="card"><rect x="1" y="1" width="{W-2}" height="{H-2}" rx="14"/></clipPath>
   <style>
-    .spin{{transform-origin:120px 170px;animation:spin 18s linear infinite}}
-    .scan{{animation:scan 5.5s ease-in-out infinite}}
-    .pulse{{animation:pulse 2s ease-in-out infinite}}
+    text{{font-family:{MONO}}}
+    .rain{{animation:rain linear infinite}}
+    .spin{{transform-origin:120px 174px;animation:spin 16s linear infinite}}
+    .sweep{{animation:sweep 4.5s linear infinite}}
+    .blink{{animation:blink 1.1s steps(1) infinite}}
+    .g1{{animation:g1 3.2s infinite}} .g2{{animation:g2 3.2s infinite}}
+    @keyframes rain{{to{{transform:translateY({H + 220}px)}}}}
     @keyframes spin{{to{{transform:rotate(360deg)}}}}
-    @keyframes scan{{0%{{transform:translateY(-60px)}}100%{{transform:translateY({H}px)}}}}
-    @keyframes pulse{{50%{{opacity:.35}}}}
-    @media (prefers-reduced-motion:reduce){{.spin,.scan,.pulse{{animation:none}}}}
+    @keyframes sweep{{0%{{transform:translateY(-70px)}}100%{{transform:translateY({H}px)}}}}
+    @keyframes blink{{50%{{opacity:0}}}}
+    @keyframes g1{{0%,88%,100%{{transform:none;opacity:0}}90%{{transform:translate(-3px,1px);opacity:.35}}93%{{transform:translate(2px,-1px);opacity:.35}}96%{{transform:translate(-1px,0);opacity:.25}}}}
+    @keyframes g2{{0%,88%,100%{{transform:none;opacity:0}}90%{{transform:translate(3px,-1px);opacity:.35}}93%{{transform:translate(-2px,1px);opacity:.35}}96%{{transform:translate(1px,0);opacity:.25}}}}
+    @media (prefers-reduced-motion:reduce){{.rain,.spin,.sweep,.blink,.g1,.g2{{animation:none}}}}
   </style>
 </defs>
 <g clip-path="url(#card)">
   <rect width="{W}" height="{H}" fill="url(#bg)"/>
-  <rect width="{W}" height="{H}" fill="url(#grid)"/>
-  <rect width="{W}" height="{H}" fill="url(#glow)"/>
-  <rect x="0" y="0" width="{W}" height="4" fill="url(#brand)"/>
-  <rect class="scan" x="0" y="0" width="{W}" height="60" fill="url(#scan)"/>
+  {matrix_rain(W, H, h["green"])}
+  <rect width="{W}" height="{H}" fill="url(#scanlines)"/>
+  <rect class="sweep" width="{W}" height="70" fill="url(#sweep)"/>
+  <rect width="{W}" height="{H}" fill="url(#vig)"/>
+  <!-- title bar -->
+  <rect width="{W}" height="36" fill="#000" fill-opacity=".55"/>
+  <line x1="0" y1="36" x2="{W}" y2="36" stroke="{h["dim"]}"/>
 </g>
-<rect x="1" y="1" width="{W-2}" height="{H-2}" rx="18" fill="none" stroke="url(#brand)" stroke-opacity=".7" stroke-width="1.5"/>
-<path d="M18 1H90M1 18V90" stroke="{p["accent"]}" stroke-width="2" fill="none" transform="translate(0.5 0.5)"/>
-<path d="M{W-90} {H-1}H{W-18}M{W-1} {H-90}V{H-18}" stroke="{p["pink"]}" stroke-width="2" fill="none"/>
+<rect x="1" y="1" width="{W-2}" height="{H-2}" rx="14" fill="none" stroke="url(#edge)" stroke-width="1.2" stroke-opacity=".7"/>
+<circle cx="22" cy="18" r="5" fill="{h["red"]}"/><circle cx="40" cy="18" r="5" fill="{h["amber"]}"/><circle cx="58" cy="18" r="5" fill="{h["green"]}"/>
+<text x="{W/2}" y="23" text-anchor="middle" font-size="11.5" fill="{h["muted"]}">root@oqv:~ — ssh {t(USER.lower())}@github.com</text>
+<text x="{W-20}" y="23" text-anchor="end" font-size="10.5" font-weight="700" letter-spacing="1" fill="{h["green"]}"><tspan class="blink">●</tspan> ACCESS_GRANTED</text>
 
-<!-- header -->
-<text x="32" y="42" font-family="{MONO}" font-size="13" font-weight="700" letter-spacing="2" fill="{p["accent"]}">OQV://IDENTITY</text>
-<text x="190" y="42" font-family="{MONO}" font-size="10.5" letter-spacing="1.5" fill="{p["muted"]}">SMART DEVELOPER CREDENTIAL</text>
-<rect x="{W-138}" y="24" width="106" height="26" rx="13" fill="{p["accent2"]}" fill-opacity=".12" stroke="{p["accent2"]}" stroke-opacity=".5"/>
-<circle class="pulse" cx="{W-120}" cy="37" r="4" fill="{p["accent2"]}"/>
-<text x="{W-108}" y="41" font-family="{MONO}" font-size="11" font-weight="700" letter-spacing="1.5" fill="{p["accent2"]}">VERIFIED</text>
-<line x1="32" y1="64" x2="{W-32}" y2="64" stroke="{p["border"]}"/>
+<!-- prompt -->
+<text x="32" y="64" font-size="12.5" fill="{h["green"]}">root@oqv<tspan fill="{h["muted"]}">:</tspan><tspan fill="{h["cyan"]}">~</tspan><tspan fill="{h["muted"]}">#</tspan> <tspan fill="{h["text"]}">./identity --verify --user {t(USER)}</tspan></text>
+<text x="32" y="84" font-size="11" fill="{h["muted"]}">[<tspan fill="{h["green"]}"> OK </tspan>] signature valid · sha256:{digest[:24]}…</text>
 
 <!-- avatar -->
-<circle cx="120" cy="170" r="76" fill="none" stroke="url(#ring)" stroke-width="2" stroke-dasharray="3 7" class="spin"/>
-<circle cx="120" cy="170" r="68" fill="none" stroke="url(#ring)" stroke-width="3"/>
+<circle cx="120" cy="174" r="76" fill="none" stroke="{h["green"]}" stroke-width="1.5" stroke-dasharray="2 6" class="spin" opacity=".8"/>
+<circle cx="120" cy="174" r="68" fill="none" stroke="url(#edge)" stroke-width="2.5" filter="url(#glow)"/>
+<path d="M120 94v10M120 244v10M40 174h10M190 174h10" stroke="{h["green"]}" stroke-width="2"/>
 {avatar}
 
-<!-- identity -->
-<text x="224" y="112" font-family="{SANS}" font-size="27" font-weight="800" letter-spacing=".5" fill="url(#brand)">{t(CONFIG["name"])}</text>
-<text x="226" y="138" font-family="{MONO}" font-size="12" font-weight="700" letter-spacing="1.2">{tagline}</text>
-<line x1="226" y1="156" x2="610" y2="156" stroke="{p["border"]}" stroke-dasharray="2 4"/>
+<!-- identity with glitch -->
+<g font-size="26" font-weight="800" letter-spacing="1">
+  <text class="g1" x="224" y="128" fill="{h["red"]}">{name}</text>
+  <text class="g2" x="224" y="128" fill="{h["cyan"]}">{name}</text>
+  <text x="224" y="128" fill="{h["green"]}">{name}</text>
+</g>
+<text x="226" y="152" font-size="11.5" font-weight="700" letter-spacing=".8"><tspan fill="{h["muted"]}">&gt; </tspan>{tagline}<tspan class="blink" fill="{h["green"]}"> █</tspan></text>
+<line x1="226" y1="166" x2="620" y2="166" stroke="{h["dim"]}" stroke-dasharray="3 3"/>
 {"".join(rows)}
 
 <!-- stats panel -->
-<rect x="650" y="84" width="198" height="190" rx="12" fill="{p["panel"]}" fill-opacity=".85" stroke="{p["border"]}"/>
+<rect x="650" y="96" width="200" height="176" rx="8" fill="#000" fill-opacity=".55" stroke="{h["dim"]}"/>
+<text x="662" y="90" font-size="9.5" letter-spacing="1" fill="{h["muted"]}">┌─ sys.stats</text>
 {"".join(stat_svg)}
-<line x1="666" y1="222" x2="832" y2="222" stroke="{p["border"]}"/>
-<circle class="pulse" cx="672" cy="241" r="4" fill="{p["accent2"]}"/>
-<text x="682" y="245" font-family="{MONO}" font-size="11" font-weight="700" letter-spacing="1" fill="{p["accent2"]}">{t(CONFIG["status"])}</text>
-<text x="666" y="262" font-family="{MONO}" font-size="10" fill="{p["muted"]}">latest › <tspan fill="{p["text"]}">{t(CONFIG["latest_project"])}</tspan></text>
+<line x1="664" y1="220" x2="836" y2="220" stroke="{h["dim"]}" stroke-dasharray="3 3"/>
+<text x="664" y="241" font-size="11" font-weight="700" letter-spacing="1" fill="{h["green"]}"><tspan class="blink">▶</tspan> {t(CONFIG["status"])}</text>
+<text x="664" y="260" font-size="10" fill="{h["muted"]}">latest › <tspan fill="{h["amber"]}">{t(CONFIG["latest_project"])}</tspan></text>
 
 <!-- footer -->
-<line x1="32" y1="290" x2="{W-32}" y2="290" stroke="{p["border"]}"/>
-{barcode(USER + CONFIG["credential_id"], 32, 302, 18, p["muted"], 150)}
-<text x="200" y="316" font-family="{MONO}" font-size="11" letter-spacing="1" fill="{p["muted"]}">ID <tspan fill="{p["text"]}">{t(CONFIG["credential_id"])}</tspan>   ·   github.com/{t(USER)}</text>
-<text x="{W-32}" y="316" text-anchor="end" font-family="{MONO}" font-size="11" letter-spacing="1" fill="{p["muted"]}">LAST SYNC <tspan fill="{p["text"]}">{sync}</tspan></text>
+<line x1="32" y1="290" x2="{W-32}" y2="290" stroke="{h["dim"]}"/>
+{barcode(USER + CONFIG["credential_id"], 32, 302, 18, h["green"], 140)}
+<text x="190" y="316" font-size="11" fill="{h["muted"]}">ID <tspan fill="{h["green"]}">{t(CONFIG["credential_id"])}</tspan>  ·  github.com/<tspan fill="{h["text"]}">{t(USER)}</tspan></text>
+<text x="{W-32}" y="316" text-anchor="end" font-size="11" fill="{h["muted"]}">last_sync=<tspan fill="{h["cyan"]}">{sync}</tspan></text>
 </svg>
 """
 

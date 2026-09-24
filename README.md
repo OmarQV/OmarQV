@@ -11,13 +11,13 @@
   <img src="./assets/credential-dark.svg" width="100%" alt="OQV smart developer credential: Omar Quispe Vargas, AI agents × Web3 × information security, La Paz, Bolivia" />
 </picture>
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=16&duration=2800&pause=1100&color=A371F7&center=true&vCenter=true&width=760&lines=Building+systems+that+can+be+explained+and+verified.;AI+agents+%C3%97+programmable+money+%C3%97+digital+evidence.;Security-first+engineering+from+Bolivia+%F0%9F%87%A7%F0%9F%87%B4" alt="Building systems that can be explained and verified" />
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=16&duration=2800&pause=1100&color=A371F7&center=true&vCenter=true&width=760&lines=Building+systems+that+can+be+explained+and+verified.;AI+agents+%C3%97+programmable+money+%C3%97+digital+evidence.;Security-first+engineering+from+Bolivia" alt="Building systems that can be explained and verified" />
 
 </div>
 
 ```console
 $ whoami
-> Omar Quispe Vargas — software engineer from La Paz, Bolivia 🇧🇴
+> Omar Quispe Vargas — software engineer from La Paz, Bolivia
 > I build at the intersection of AI agents, Web3 and information security.
 
 $ cat principles.txt
