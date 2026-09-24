@@ -1,41 +1,35 @@
-# Profile settings and maintenance
+# Profile maintenance
 
-The README and its visual assets are maintained in this repository. GitHub's
-profile sidebar and pinned repositories are separate account settings.
+The README keeps the original identity → practice → recognition → stack →
+direction → activity → background → contact structure. It intentionally has
+**no featured-project section**.
 
-## Suggested public profile fields
+## Account settings outside this repository
 
-- **Bio:** `Building verifiable software across AI agents, Web3 and security · La Paz, Bolivia`
-- **Website:** `https://omidev.vercel.app/`
-- **Location:** `La Paz, Bolivia`
-- **Social:** LinkedIn and X links already used in `README.md`.
+GitHub's sidebar bio, website, location and pinned repositories are separate
+account settings. Editing this repository cannot change them. Suggested bio:
 
-## Pinned repositories
+> Developer building verifiable systems across AI agents, Web3 and security · La Paz, Bolivia
 
-Start with [`vector52`](https://github.com/OmarQV/vector52). Its public README
-documents the project. Most other recent repositories have no README yet, so
-prepare those before pinning them. In particular, `omidev` and `stellar-build`
-could become strong pins after adding a clear description, setup instructions,
-screenshots or a demo, and an honest current status. Do not fill six slots with
-old coursework merely to use every slot.
+Website: `https://omidev.vercel.app/` · Location: `La Paz, Bolivia`.
 
-Pay-per-Thought and AIni Pay currently have working project/demo links in the
-profile, but no confirmed public repository on this account to pin.
+If you also want fewer repositories shown on the profile page, review
+**Customize your pins** while signed in to GitHub. The README does not list or
+link to individual projects.
 
-Use GitHub's **Customize your pins** control on the profile page. GitHub pins
-cannot be changed by editing this repository.
+## Dynamic elements
 
-## Visual assets
+- The header uses `readme-typing-svg` for a short animated introduction.
+- Technology logos come from `skillicons.dev`; social badges come from
+  `shields.io`.
+- `.github/workflows/profile-3d.yml` uses
+  `yoshi389111/github-profile-3d-contrib` to generate the Southern Hemisphere
+  3D contribution graph each day. It commits only the SVG displayed in the
+  README and uses the repository's built-in `GITHUB_TOKEN`.
+- The activity graphic reports contributions, not ability. Real-world awards
+  and roles are stated separately in the Milestones section.
 
-- `python scripts/render_hero.py` generates the desktop and mobile heroes for
-  dark and light themes. The SVGs include subtle animation and static content
-  that remains legible when motion is reduced.
-- `python scripts/render_profile.py` queries GitHub's Languages API for four
-  selected public repositories. It generates the desktop and mobile code
-  footprint charts. The chart counts language bytes, not expertise.
-- `.github/workflows/update-profile.yml` refreshes the footprint daily and
-  commits only when the chart changes. It uses the built-in `GITHUB_TOKEN` and
-  needs repository Actions to have write permission for contents.
-
-If a project changes scope, edit its description in `README.md`. If the chart's
-sample should change, edit `REPOSITORIES` in `scripts/render_profile.py`.
+The public GitHub Readme Stats endpoint was deliberately not used: its
+availability and rate limits can leave broken cards in a profile. Metrics
+requires setting up a separate personal access token for a useful account-wide
+render. Keep the profile dependent on as few services as possible.

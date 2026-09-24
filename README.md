@@ -1,101 +1,137 @@
-<!-- OmarQV / GitHub profile. Visual assets are maintained in this repository. -->
+<!-- OmarQV · GitHub profile -->
 
 <div align="center">
 
-<picture>
-  <source media="(prefers-color-scheme: dark) and (max-width: 800px)" srcset="assets/hero-mobile-dark.svg">
-  <source media="(prefers-color-scheme: light) and (max-width: 800px)" srcset="assets/hero-mobile-light.svg">
-  <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/hero-light.svg">
-  <img src="assets/hero-dark.svg" width="100%" alt="Omar Quispe Vargas — building verifiable software at the intersection of AI agents, Web3 and security" />
-</picture>
+<h1>Omar Quispe Vargas</h1>
 
-<p>
-  <a href="https://omidev.vercel.app/">Portfolio</a> &nbsp;·&nbsp;
-  <a href="https://www.linkedin.com/in/omar-quispe-vargas-7b5601204/">LinkedIn</a> &nbsp;·&nbsp;
-  <a href="https://x.com/OmarQV2025">X</a> &nbsp;·&nbsp;
-  <a href="mailto:quispevargasomar@gmail.com">Email</a>
-</p>
+<p><strong>Software engineering · AI agents · Web3 · security</strong><br />
+La Paz, Bolivia 🇧🇴</p>
+
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=17&duration=2800&pause=1100&color=58A6FF&center=true&vCenter=true&width=760&lines=Building+systems+that+can+be+explained+and+verified.;AI+agents+%C3%97+programmable+money+%C3%97+digital+evidence.;Security-first+engineering+from+Bolivia." alt="Animated introduction: building verifiable systems" />
 
 </div>
 
-## 01 / About
-
-I'm **Omar Quispe Vargas**, a developer based in **La Paz, Bolivia**. I build at the intersection of **AI agents, programmable payments and digital evidence**.
-
-I lead application development at Baral and study Informatics with a focus on Information Security at UMSA. My background in public accounting shapes how I approach software: make decisions traceable, controls explicit and results open to verification.
-
-> **Build useful systems. Leave evidence. Make trust inspectable.**
-
-## 02 / Selected work
-
-### [Vector52](https://github.com/OmarQV/vector52) <sub>· Onchain forensics</sub>
-
-A team project for investigating onchain claims with preserved evidence, attributable flows, counterevidence and explicit limits. I led the frontend and integration work for the ETHOnline iteration; the project later won the **Real World Applications / HSK Chain** track at Buildathon Cochabamba 2026.
-
-`React` `TypeScript` `FastAPI` `Python` `Ethereum RPC` `The Graph`
-
-[Explore the repository →](https://github.com/OmarQV/vector52)
-
-### [Pay-per-Thought](https://lablab.ai/ai-hackathons/nano-payments-arc/pay-per-thought/pay-per-thought-verifiable-ai-payments-on-arc) <sub>· Agent payments</sub>
-
-An agent workflow that plans tasks, authorizes spend and pays for API calls with USDC on Arc Testnet. The hackathon submission documents **111 onchain transactions** and a verifiable receipt for each answer.
-
-`Python` `LangGraph` `x402` `Vyper` `Arc` `Circle`
-
-[Project and evidence →](https://lablab.ai/ai-hackathons/nano-payments-arc/pay-per-thought/pay-per-thought-verifiable-ai-payments-on-arc) · [Live demo →](https://pay-per-thought.vercel.app/)
-
-### [AIni Pay](https://aini-pay.vercel.app/) <sub>· Multichain payments</sub>
-
-An AI-assisted Web3 payment experience built with a team across EVM and Celestia. The project earned **1st place at CochaBlock: Destino Devconnect 2025**.
-
-`React` `Vite` `Wagmi` `Viem` `Celestia`
-
-[Open the demo →](https://aini-pay.vercel.app/)
-
-### [AndesMaaS 3.0](https://andesmaas-3-0.vercel.app/app) <sub>· Mobility / DePIN</sub>
-
-An exploration of mobility infrastructure and gamified participation for La Paz, built around the Stellar ecosystem.
-
-`Stellar` `Soroban` `Web3`
-
-[Try the demo →](https://andesmaas-3-0.vercel.app/app) · [Watch the walkthrough →](https://youtu.be/8ZjMN5mYSgs)
-
-## 03 / How I build
-
-| Layer | Tools and interests |
-| :--- | :--- |
-| **Product** | TypeScript · React · Next.js · Tailwind CSS |
-| **Agents and APIs** | Python · FastAPI · LangGraph · MCP · x402 |
-| **Onchain** | Solidity · Vyper · EVM · Stellar · Wagmi · Viem |
-| **Security** | Threat modeling · digital forensics · reproducible evidence · Linux |
-
-My current questions: **How can agents transact with clear limits? How can a blockchain investigation be reproduced by someone who wasn't in the room?**
-
-## 04 / Community and milestones
-
-- **2026** · Stellar Ambassador Program, Tier 2 Contributor.
-- **2025** · CochaBlock winner with AIni Pay; later participated in Devconnect Argentina.
-- **2024** · Teaching assistant for Web Programming II at UMSA.
-- **2026** · Co-organizer of developer events and workshops in La Paz.
-
-## 05 / Code footprint
+<table align="center">
+<tr>
+<td width="190" align="center">
+  <img src="https://github.com/OmarQV.png?size=180" width="138" alt="Portrait of Omar Quispe Vargas" /><br />
+  <strong>OMAR Q. VARGAS</strong><br />
+  <code>@OmarQV</code>
+</td>
+<td width="590" valign="top">
+  <h3>OQV://IDENTITY</h3>
+  <code>ROLE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Developer · Application Development Lead</code><br />
+  <code>BASE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; La Paz, Bolivia</code><br />
+  <code>FOCUS&nbsp;&nbsp;&nbsp;&nbsp; AI Agents · Web3 · Information Security</code><br />
+  <code>METHOD&nbsp;&nbsp;&nbsp; Build · Trace · Verify</code><br /><br />
+  <a href="https://github.com/OmarQV?tab=followers"><img src="https://img.shields.io/github/followers/OmarQV?style=flat-square&label=GitHub%20followers&color=238636&logo=github" alt="GitHub followers" /></a>
+  <a href="https://omidev.vercel.app/"><img src="https://img.shields.io/badge/Portfolio-Explore-1f6feb?style=flat-square&logo=vercel&logoColor=white" alt="Portfolio" /></a>
+</td>
+</tr>
+</table>
 
 <div align="center">
-<picture>
-  <source media="(prefers-color-scheme: dark) and (max-width: 800px)" srcset="assets/footprint-mobile-dark.svg">
-  <source media="(prefers-color-scheme: light) and (max-width: 800px)" srcset="assets/footprint-mobile-light.svg">
-  <source media="(prefers-color-scheme: dark)" srcset="assets/footprint-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/footprint-light.svg">
-  <img src="assets/footprint-dark.svg" width="100%" alt="Language footprint across four selected public repositories, generated from GitHub's Languages API" />
-</picture>
-</div>
 
-<sub>Generated from code bytes in four selected public repositories. This shows repository composition, not proficiency. <a href="scripts/render_profile.py">See the source</a>.</sub>
+> I build useful software whose decisions can be traced and whose results can be verified.
+
+</div>
 
 ---
 
+## ⚡ What I build
+
+<table>
+<tr>
+<td width="33%" valign="top">
+  <h3>🤖 Agentic systems</h3>
+  AI agents, tool orchestration and payment-aware workflows with explicit limits and auditable outcomes.
+</td>
+<td width="33%" valign="top">
+  <h3>⛓️ Web3 infrastructure</h3>
+  Smart contracts, wallets and programmable payments designed for real-world use.
+</td>
+<td width="33%" valign="top">
+  <h3>🛡️ Security &amp; forensics</h3>
+  Threat-aware architecture, digital evidence and reproducible investigations.
+</td>
+</tr>
+</table>
+
+---
+
+## 🏆 Milestones & recognition
+
+| Year | Recognition |
+| :--- | :--- |
+| **2026** | 🥇 **1st place**, Real World Applications / HSK Chain track — Ethereum Bolivia Buildathon, Cochabamba. |
+| **2026** | ✨ **Tier 2 Contributor**, Stellar Ambassador Program. |
+| **2025** | 🥇 **1st place**, CochaBlock Challenge: Destino Devconnect. |
+
+<sub>Team achievements are credited as team wins; the Stellar role is a contributor recognition, not a competition award.</sub>
+
+---
+
+## 🧰 Engineering stack
+
 <div align="center">
-  <strong>OQV://BUILD · TRACE · VERIFY</strong><br />
-  <sub>Open to thoughtful collaborations in AI, Web3 and security · <a href="mailto:quispevargasomar@gmail.com">Let's talk</a></sub>
+
+<img src="https://skillicons.dev/icons?i=ts,js,react,nextjs,nodejs,python,solidity,docker,git,linux,postgres,tailwind&perline=6" alt="TypeScript, JavaScript, React, Next.js, Node.js, Python, Solidity, Docker, Git, Linux, PostgreSQL and Tailwind CSS" />
+
+</div>
+
+<br />
+
+| Practice | Tools & methods |
+| :--- | :--- |
+| **Web & product** | TypeScript · React · Next.js · APIs · accessible interfaces |
+| **AI & agents** | Python · LangGraph · MCP · tool calling · x402 |
+| **Blockchain** | Solidity · EVM · Stellar/Soroban · Wagmi · Viem |
+| **Security & infrastructure** | Threat modeling · digital forensics · Linux · Docker · GitHub Actions |
+
+---
+
+## 🧭 Current direction
+
+- Making **autonomous-agent payments** safer through clear permissions, spending limits and verifiable receipts.
+- Connecting **on-chain data and digital forensics** to evidence a third party can reproduce.
+- Bringing an **information-security mindset** into product engineering from the first design decision.
+
+---
+
+## 📊 GitHub signal
+
+<div align="center">
+
+<img src="./profile-3d-contrib/profile-south-season-animate.svg" width="100%" alt="Animated 3D visualization of Omar's GitHub contributions, using Southern Hemisphere seasons" />
+
+<sub>Contribution calendar generated daily by <a href="https://github.com/yoshi389111/github-profile-3d-contrib">GitHub Profile 3D Contrib</a>. Activity is one signal, not a measure of expertise.</sub>
+
+</div>
+
+---
+
+## 🌎 Beyond the code
+
+- 🎓 Studying **Informatics, Information Security track**, at Universidad Mayor de San Andrés (UMSA).
+- 📚 Also trained in **public accounting** — a useful lens for controls, traceability and auditability.
+- 👨‍🏫 Former teaching assistant in **Web Programming II** at UMSA.
+- 🤝 Active in Bolivia's developer and Web3 communities through workshops, hackathons and collaboration.
+
+---
+
+## 🤝 Let's connect
+
+<div align="center">
+
+[![Portfolio](https://img.shields.io/badge/Portfolio-omidev-111827?style=for-the-badge&logo=vercel&logoColor=white)](https://omidev.vercel.app/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Omar_Quispe_Vargas-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/omar-quispe-vargas-7b5601204/)
+[![X](https://img.shields.io/badge/X-@OmarQV2025-111827?style=for-the-badge&logo=x&logoColor=white)](https://x.com/OmarQV2025)
+[![Telegram](https://img.shields.io/badge/Telegram-@omar__q__v-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/omar_q_v)
+[![Email](https://img.shields.io/badge/Email-Say_hello-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:quispevargasomar@gmail.com)
+
+<br />
+
+<strong>Open to thoughtful collaborations in AI, Web3 and security.</strong><br />
+<sub>OQV://BUILD · TRACE · VERIFY</sub>
+
 </div>

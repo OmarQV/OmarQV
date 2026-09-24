@@ -1,4 +1,4 @@
-name: Refresh profile footprint
+name: Refresh 3D contributions
 
 on:
   schedule:
@@ -7,8 +7,7 @@ on:
   push:
     branches: [main]
     paths:
-      - "scripts/render_profile.py"
-      - ".github/workflows/update-profile.yml"
+      - ".github/workflows/profile-3d.yml"
 
 permissions:
   contents: write
@@ -18,17 +17,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Render charts from public repositories
+      - name: Generate Southern Hemisphere contribution graph
+        uses: yoshi389111/github-profile-3d-contrib@latest
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python3 scripts/render_profile.py
-      - name: Commit chart changes
+          USERNAME: ${{ github.repository_owner }}
+      - name: Commit the displayed chart if changed
         run: |
-          git add assets/footprint-dark.svg assets/footprint-light.svg \
-                  assets/footprint-mobile-dark.svg assets/footprint-mobile-light.svg
+          git add profile-3d-contrib/profile-south-season-animate.svg
           if ! git diff --cached --quiet; then
             git -c user.name="github-actions[bot]" \
                 -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
-                commit -m "chore: refresh profile footprint"
+                commit -m "chore: refresh 3D contributions"
             git push
           fi
