@@ -24,7 +24,7 @@ $ cat principles.txt
 > The core computes. The evidence proves. The agent explains. The person decides.
 
 $ ls ./current_focus
-agent-payments/   blockchain-forensics/   x402/   secure-by-design/   dev-communities/
+agent-commerce/   onchain-evidence/   stellar-payments/   secure-by-design/
 ```
 
 <p align="center"><img src="./assets/divider.svg" width="100%" alt="" /></p>
