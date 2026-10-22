@@ -40,7 +40,7 @@ agent-payments/   blockchain-forensics/   x402/   secure-by-design/   dev-commun
 | **2025** | 🥇 **1st place**, CochaBlock Challenge: Destino Devconnect (AIni Pay). |
 | **2025–26** | 🧑‍🤝‍🧑 Co-organizer of **Aleph Hackathon: La Paz chapter** and the **Vercel hackathon at UMSA**. |
 
-<sub>Team achievements are credited as team wins. The Stellar role is contributor recognition, not a competition award.</sub>
+<sub>The Rally took place on 16–17 October 2026 across 11 countries; the third-place result is specifically for the UMSA venue, not a regional overall ranking. Team achievements are credited as team wins. The Stellar role is contributor recognition, not a competition award.</sub>
 
 <p align="center"><img src="./assets/divider.svg" width="100%" alt="" /></p>
 
