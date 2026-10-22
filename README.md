@@ -33,6 +33,7 @@ agent-payments/   blockchain-forensics/   x402/   secure-by-design/   dev-commun
 
 | Year | Recognition |
 | :--- | :--- |
+| **2026** | 🥉 **3rd place, Innovation category**, Rally Latinoamericano de Innovación — **UMSA venue, Bolivia**, with team **a52**. |
 | **2026** | 🥇 **1st place**, Real World Applications / HSK Chain track: Ethereum Bolivia Buildathon, Cochabamba (Vector52). |
 | **2026** | ✨ **Tier 2 Contributor**, Stellar Ambassador Program. Selected for **Stellar Elite**. |
 | **2026** | 🎓 **Aspire Institute** program completed with certificate. |
