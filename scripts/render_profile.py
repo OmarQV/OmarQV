@@ -172,7 +172,7 @@ def render_card(theme: str, data: dict, today: dt.date) -> str:
     name = t(CONFIG["name"])
     return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-labelledby="title desc">
 <title id="title">{name} — developer credential</title>
-<desc id="desc">{t(CONFIG["tagline"])}. {t(" · ".join(v for _, v in CONFIG["rows"]))}. Status {t(CONFIG["status"])}, latest project {t(CONFIG["latest_project"])}.</desc>
+<desc id="desc">{t(CONFIG["tagline"])}. {t(" · ".join(v for _, v in CONFIG["rows"]))}. Status {t(CONFIG["status"])}, current focus {t(CONFIG["current_focus"])}.</desc>
 <defs>
   <radialGradient id="bg" cx=".3" cy=".35" r="1"><stop offset="0" stop-color="{h["bg2"]}"/><stop offset="1" stop-color="{h["bg1"]}"/></radialGradient>
   <radialGradient id="vig" cx=".5" cy=".5" r=".75"><stop offset=".6" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".65"/></radialGradient>
@@ -239,7 +239,7 @@ def render_card(theme: str, data: dict, today: dt.date) -> str:
 {"".join(stat_svg)}
 <line x1="664" y1="220" x2="836" y2="220" stroke="{h["dim"]}" stroke-dasharray="3 3"/>
 <text x="664" y="241" font-size="11" font-weight="700" letter-spacing="1" fill="{h["green"]}"><tspan class="blink">▶</tspan> {t(CONFIG["status"])}</text>
-<text x="664" y="260" font-size="10" fill="{h["muted"]}">latest › <tspan fill="{h["amber"]}">{t(CONFIG["latest_project"])}</tspan></text>
+<text x="664" y="260" font-size="10" fill="{h["muted"]}">focus › <tspan fill="{h["amber"]}">{t(CONFIG["current_focus"])}</tspan></text>
 
 <!-- footer -->
 <line x1="32" y1="290" x2="{W-32}" y2="290" stroke="{h["dim"]}"/>
