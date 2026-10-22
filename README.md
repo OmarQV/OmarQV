@@ -42,6 +42,11 @@ agent-payments/   blockchain-forensics/   x402/   secure-by-design/   dev-commun
 
 <sub>The Rally took place on 16–17 October 2026 across 11 countries; the third-place result is specifically for the UMSA venue, not a regional overall ranking. Team achievements are credited as team wins. The Stellar role is contributor recognition, not a competition award.</sub>
 
+<details>
+<summary>Stellar Elite · closing visual</summary>
+<p align="center"><img src="./assets/stellar-elite-tilcai.png" width="360" alt="Stellar Elite visual for TilcAI, an AI-agent commerce initiative on Stellar" /></p>
+</details>
+
 <p align="center"><img src="./assets/divider.svg" width="100%" alt="" /></p>
 
 ## 🗺️ Build log
