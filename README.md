@@ -6,6 +6,7 @@
 <div align="center">
 
 <picture>
+  <source media="(max-width: 600px)" srcset="./assets/credential-mobile.svg" />
   <source media="(prefers-color-scheme: dark)" srcset="./assets/credential-dark.svg" />
   <source media="(prefers-color-scheme: light)" srcset="./assets/credential-light.svg" />
   <img src="./assets/credential-dark.svg" width="100%" alt="OQV smart developer credential: Omar Quispe Vargas, AI agents × Web3 × information security, La Paz, Bolivia" />

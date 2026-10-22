@@ -235,6 +235,63 @@ def render_card(theme: str, data: dict, today: dt.date) -> str:
 """
 
 
+def render_mobile_card(data: dict, today: dt.date) -> str:
+    """A portrait credential that stays legible at phone width."""
+    h = HACK
+    t = lambda value: escape(str(value))  # noqa: E731
+    words = CONFIG["name"].split()
+    first_line = t(" ".join(words[:2]))
+    second_line = t(" ".join(words[2:]))
+    initials = t("".join(word[0] for word in words[:2]))
+    if data["avatar"]:
+        avatar = (f'<image href="{data["avatar"]}" x="31" y="91" width="100" height="100" '
+                  'clip-path="url(#mobile-avatar)" preserveAspectRatio="xMidYMid slice"/>')
+    else:
+        avatar = (f'<circle cx="81" cy="141" r="50" fill="{h["bg2"]}"/>'
+                  f'<text x="81" y="155" text-anchor="middle" font-size="33" '
+                  f'font-weight="700" fill="{h["green"]}">{initials}</text>')
+    stats = [
+        (data["public_repos"], "REPOS"),
+        (data["followers"], "FOLLOWERS"),
+        (CONFIG["hackathons"], "HACKATHONS"),
+        (CONFIG["first_places"], "1ST PLACES"),
+    ]
+    stat_svg = "".join(
+        f'<text x="{48 + i * 96}" y="415" font-size="23" font-weight="700" fill="{h["cyan"]}">{t(value)}</text>'
+        f'<text x="{48 + i * 96}" y="432" font-size="9" fill="{h["muted"]}">{label}</text>'
+        for i, (value, label) in enumerate(stats)
+    )
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="420" height="530" viewBox="0 0 420 530" role="img" aria-labelledby="mobile-title mobile-desc">
+<title id="mobile-title">{t(CONFIG["name"])} — developer credential</title>
+<desc id="mobile-desc">AI agents, Web3 and information security in La Paz. Current focus: {t(CONFIG["current_focus"])}.</desc>
+<defs><clipPath id="mobile-avatar"><circle cx="81" cy="141" r="50"/></clipPath></defs>
+<style>text{{font-family:{MONO}}}</style>
+<rect x="1" y="1" width="418" height="528" rx="14" fill="{h["bg1"]}" stroke="{h["green"]}"/>
+<rect x="2" y="2" width="416" height="35" rx="13" fill="#071a10"/>
+<circle cx="20" cy="19" r="5" fill="{h["red"]}"/><circle cx="38" cy="19" r="5" fill="{h["amber"]}"/><circle cx="56" cy="19" r="5" fill="{h["green"]}"/>
+<text x="210" y="23" text-anchor="middle" font-size="11" fill="{h["muted"]}">OQV://IDENTITY</text>
+<text x="28" y="67" font-size="12" fill="{h["green"]}">&gt; ./identity --verify</text>
+<circle cx="81" cy="141" r="54" fill="none" stroke="{h["green"]}" stroke-width="2"/>
+{avatar}
+<text x="150" y="119" font-size="21" font-weight="800" fill="{h["green"]}">{first_line}</text>
+<text x="150" y="146" font-size="21" font-weight="800" fill="{h["green"]}">{second_line}</text>
+<text x="150" y="176" font-size="11" fill="{h["muted"]}">LA PAZ, BOLIVIA</text>
+<line x1="28" y1="205" x2="392" y2="205" stroke="{h["dim"]}"/>
+<text x="28" y="228" font-size="11" font-weight="700" fill="{h["cyan"]}">AI AGENTS × WEB3 × INFORMATION SECURITY</text>
+<text x="28" y="267" font-size="12" fill="{h["muted"]}">ROLE</text><text x="111" y="267" font-size="13" fill="{h["text"]}">Software Engineer · Builder</text>
+<text x="28" y="295" font-size="12" fill="{h["muted"]}">BASE</text><text x="111" y="295" font-size="13" fill="{h["text"]}">La Paz, Bolivia</text>
+<text x="28" y="323" font-size="12" fill="{h["muted"]}">TRACK</text><text x="111" y="323" font-size="12.5" fill="{h["text"]}">Informatics · InfoSec (UMSA)</text>
+<text x="28" y="351" font-size="12" fill="{h["muted"]}">METHOD</text><text x="111" y="351" font-size="13" fill="{h["text"]}">Build · Trace · Verify</text>
+<rect x="28" y="382" width="364" height="67" rx="8" fill="#071a10" stroke="{h["dim"]}"/>
+{stat_svg}
+<text x="29" y="483" font-size="12" font-weight="700" fill="{h["green"]}">● {t(CONFIG["status"])} <tspan fill="{h["muted"]}"> · FOCUS:</tspan> {t(CONFIG["current_focus"])}</text>
+<line x1="28" y1="500" x2="392" y2="500" stroke="{h["dim"]}"/>
+<text x="28" y="518" font-size="10" fill="{h["muted"]}">github.com/{t(USER)}</text>
+<text x="392" y="518" text-anchor="end" font-size="10" fill="{h["muted"]}">{today.isoformat()}</text>
+</svg>
+"""
+
+
 def render_divider() -> str:
     return """<svg xmlns="http://www.w3.org/2000/svg" width="880" height="12" viewBox="0 0 880 12" role="presentation">
 <defs><linearGradient id="d" x1="0" y1="0" x2="1" y2="0" spreadMethod="reflect">
@@ -253,6 +310,7 @@ def main() -> None:
     assets.mkdir(exist_ok=True)
     for theme in ("dark", "light"):
         (assets / f"credential-{theme}.svg").write_text(render_card(theme, data, today), encoding="utf-8")
+    (assets / "credential-mobile.svg").write_text(render_mobile_card(data, today), encoding="utf-8")
     (assets / "divider.svg").write_text(render_divider(), encoding="utf-8")
     print(f"rendered profile assets for {USER}: repos={data['public_repos']} "
           f"followers={data['followers']} avatar={'yes' if data['avatar'] else 'initials'}")
