@@ -49,13 +49,13 @@ agent-payments/   blockchain-forensics/   x402/   secure-by-design/   dev-commun
 
 <p align="center"><img src="./assets/divider.svg" width="100%" alt="" /></p>
 
-## 🗺️ Build log
+## ⚡ What I build
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/buildlog-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="./assets/buildlog-light.svg" />
-  <img src="./assets/buildlog-dark.svg" width="100%" alt="Build log. 2025: Kredentia, Cocadena, Lotes Chain Bolivia, CoFi, sBTC ChatBot, LlamaRollup, AIni Pay (1st place). 2026: YellowMeter, AetherGuard Nexus, Pay-per-Thought, Nova Registry Agent, AndesMaaS 3.0, FRONTERA, RumorLab, Vector52 (1st place), Stellar Elite and ExpoVia." />
-</picture>
+| Area | How I approach it |
+| :--- | :--- |
+| **AI agents** | Clear permissions, spending limits and verifiable receipts for autonomous workflows. |
+| **Web3 systems** | Practical payment rails, smart contracts and interfaces that people can actually use. |
+| **Security & forensics** | Traceable decisions, reproducible evidence and a threat-aware development process. |
 
 <p align="center"><img src="./assets/divider.svg" width="100%" alt="" /></p>
 
