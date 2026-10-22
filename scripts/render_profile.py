@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-"""Render the OQV profile assets: smart credential and build log (dark + light
-SVG) plus the gradient divider.
+"""Render the OQV profile assets: smart credential (dark + light SVG)
+plus the gradient divider.
 
 Standard library only, so it runs on a bare GitHub Actions runner.
 Every network call has a fallback: if GitHub is unreachable the card is still
@@ -28,21 +28,6 @@ CONFIG = json.loads((ROOT / "profile.json").read_text(encoding="utf-8"))
 USER = os.environ.get("USERNAME_OVERRIDE") or CONFIG["username"]
 OFFLINE = "--offline" in sys.argv
 TOKEN = os.environ.get("GITHUB_TOKEN", "")
-
-PALETTES = {
-    "dark": {
-        "bg1": "#0d1117", "bg2": "#111a2b", "panel": "#161b22", "border": "#30363d",
-        "grid": "#1f6feb", "accent": "#58a6ff", "accent2": "#3fb950",
-        "text": "#e6edf3", "muted": "#8b949e", "warn": "#d29922",
-        "purple": "#a371f7", "pink": "#f778ba", "orange": "#f0883e", "gold": "#e3b341",
-    },
-    "light": {
-        "bg1": "#ffffff", "bg2": "#eef4fc", "panel": "#f6f8fa", "border": "#d0d7de",
-        "grid": "#0969da", "accent": "#0969da", "accent2": "#1a7f37",
-        "text": "#1f2328", "muted": "#59636e", "warn": "#9a6700",
-        "purple": "#8250df", "pink": "#bf3989", "orange": "#bc4c00", "gold": "#9a6700",
-    },
-}
 
 MONO = "'JetBrains Mono','SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace"
 SANS = "-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans',Helvetica,Arial,sans-serif"
@@ -250,55 +235,6 @@ def render_card(theme: str, data: dict, today: dt.date) -> str:
 """
 
 
-# --------------------------------------------------------------------------- build log
-def render_timeline(theme: str) -> str:
-    p = PALETTES[theme]
-    t = lambda s: escape(str(s))  # noqa: E731
-    lanes = CONFIG["timeline"]
-    W, top, row, head = 880, 64, 27, 46
-    H = top + sum(head + len(l["items"]) * row + 22 for l in lanes) - 14
-    out, y = [], top
-    for li, lane in enumerate(lanes):
-        c1, c2 = p[lane["colors"][0]], p[lane["colors"][1]]
-        gid = f"lane{li}"
-        n = len(lane["items"])
-        y0, y1 = y + 18, y + head + (n - 1) * row + 4
-        out.append(
-            f'<linearGradient id="{gid}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="{c1}"/>'
-            f'<stop offset="1" stop-color="{c2}"/></linearGradient>'
-            f'<rect x="84" y="{y0}" width="3" height="{y1 - y0}" rx="1.5" fill="url(#{gid})"/>'
-            f'<rect x="24" y="{y + 2}" width="52" height="24" rx="12" fill="{c1}" fill-opacity=".16" stroke="{c1}" stroke-opacity=".6"/>'
-            f'<text x="50" y="{y + 19}" text-anchor="middle" font-family="{MONO}" font-size="12.5" font-weight="700" fill="{c1}">{t(lane["year"])}</text>'
-            f'<circle cx="85.5" cy="{y + 14}" r="7" fill="{p["bg1"]}" stroke="{c1}" stroke-width="3"/>'
-            f'<text x="104" y="{y + 19}" font-family="{SANS}" font-size="15" font-weight="700" fill="{p["text"]}">{t(lane["title"])}</text>')
-        for k, item in enumerate(lane["items"]):
-            event, project, desc = item[:3]
-            win = len(item) > 3 and item[3]
-            iy = y + head + k * row
-            frac = k / max(n - 1, 1)
-            col = c1 if frac < .5 else c2
-            out.append(
-                f'<circle cx="85.5" cy="{iy - 4}" r="4.5" fill="{col}"/>'
-                f'<text x="104" y="{iy}" font-family="{MONO}" font-size="12" font-weight="700" fill="{col}">{t(event)}</text>'
-                f'<text x="316" y="{iy}" font-family="{SANS}" font-size="13" font-weight="600" fill="{p["text"]}">{t(project)}</text>'
-                f'<text x="516" y="{iy}" font-family="{MONO}" font-size="11.5" fill="{p["muted"]}">{t(desc)}</text>')
-            if win:
-                out.append(
-                    f'<rect x="{W - 84}" y="{iy - 15}" width="58" height="20" rx="10" fill="{p["gold"]}" fill-opacity=".18" stroke="{p["gold"]}"/>'
-                    f'<text x="{W - 55}" y="{iy - 1}" text-anchor="middle" font-family="{MONO}" font-size="11" font-weight="700" fill="{p["gold"]}">1ST</text>')
-        y += head + n * row + 22
-    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-labelledby="bt">
-<title id="bt">Build log: hackathons and projects by year</title>
-<defs><linearGradient id="bb" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="{p["accent"]}"/><stop offset=".35" stop-color="{p["purple"]}"/><stop offset=".7" stop-color="{p["pink"]}"/><stop offset="1" stop-color="{p["orange"]}"/></linearGradient></defs>
-<rect x="1" y="1" width="{W-2}" height="{H-2}" rx="16" fill="{p["bg1"]}" stroke="{p["border"]}"/>
-<rect x="1" y="1" width="{W-2}" height="4" rx="2" fill="url(#bb)"/>
-<text x="24" y="38" font-family="{MONO}" font-size="12" font-weight="700" letter-spacing="2" fill="{p["accent"]}">OQV://BUILD_LOG</text>
-<text x="{W-24}" y="38" text-anchor="end" font-family="{MONO}" font-size="11" letter-spacing="1" fill="{p["muted"]}">EVENT · PROJECT · WHAT IT DOES</text>
-{"".join(out)}
-</svg>
-"""
-
-
 def render_divider() -> str:
     return """<svg xmlns="http://www.w3.org/2000/svg" width="880" height="12" viewBox="0 0 880 12" role="presentation">
 <defs><linearGradient id="d" x1="0" y1="0" x2="1" y2="0" spreadMethod="reflect">
@@ -315,9 +251,8 @@ def main() -> None:
     data = collect()
     assets = ROOT / "assets"
     assets.mkdir(exist_ok=True)
-    for theme in PALETTES:
+    for theme in ("dark", "light"):
         (assets / f"credential-{theme}.svg").write_text(render_card(theme, data, today), encoding="utf-8")
-        (assets / f"buildlog-{theme}.svg").write_text(render_timeline(theme), encoding="utf-8")
     (assets / "divider.svg").write_text(render_divider(), encoding="utf-8")
     print(f"rendered profile assets for {USER}: repos={data['public_repos']} "
           f"followers={data['followers']} avatar={'yes' if data['avatar'] else 'initials'}")
