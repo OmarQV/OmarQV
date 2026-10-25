@@ -18,7 +18,7 @@
 
 ```console
 $ whoami
-> Omar Quispe Vargas — software engineer from La Paz, Bolivia
+> Omar — software engineer from La Paz, Bolivia
 > I build at the intersection of AI agents, Web3 and information security.
 
 $ cat principles.txt
