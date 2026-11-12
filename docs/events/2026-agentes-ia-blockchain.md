@@ -41,3 +41,6 @@ The final talk included a three-minute video demonstration of TilcAI, the team's
 
 The organizer's Luma export recorded **277 approved registrations** and **121 check-ins**. That is **43.7% attendance** among approved registrations.
 
+These are aggregate counts from the internal event report; individual attendee information and financial records are not published here. The check-in count does not establish how many new Stellar ambassadors joined after the event.
+
+**Public event record:** [Agentes IA + Blockchain on Luma](https://luma.com/742fo5f8).
