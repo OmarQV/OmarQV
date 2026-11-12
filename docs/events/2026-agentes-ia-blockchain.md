@@ -29,3 +29,7 @@ Four short talks moved from agent fundamentals to a Stellar transaction.
 | Agents on Stellar | Blockchain basics, transactions and the Stellar ecosystem. |
 | From agent to transaction | Automation use cases, permissions and human review. |
 
+## Demonstration and discussion
+
+A hypothetical cinema-ticket purchase showed an agent finding an option, preparing a payment and waiting for confirmation on Stellar. It was a teaching example, without a commercial integration.
+
