@@ -33,3 +33,5 @@ Four short talks moved from agent fundamentals to a Stellar transaction.
 
 A hypothetical cinema-ticket purchase showed an agent finding an option, preparing a payment and waiting for confirmation on Stellar. It was a teaching example, without a commercial integration.
 
+The example emphasized explicit human approval and checks before signing a transaction, including the risks of automating payments.
+
