@@ -38,6 +38,7 @@ agent-commerce/   onchain-evidence/   stellar-payments/   secure-by-design/
 | **2026** | 🥉 **3rd place, Innovation category**, Rally Latinoamericano de Innovación — **UMSA venue, Bolivia**, with team **a52**. |
 | **2026** | 🥇 **1st place**, Real World Applications / HSK Chain track: Ethereum Bolivia Buildathon, Cochabamba (Vector52). |
 | **2026** | ✨ **Tier 2 Contributor**, Stellar Ambassador Program; participated in **Stellar Elite** (BAF × Stellar), focused on AI-agent commerce on Stellar. |
+| **2026** | 🎤 **Co-organizer and host**, [Agentes IA + Blockchain](https://luma.com/742fo5f8) at UMSA, La Paz. Organized by Crypto Coders and ADC, with support from BAF and Stellar. |
 | **2026** | 🎓 **Aspire Institute** program completed with certificate. |
 | **2025** | 🥇 **1st place**, CochaBlock Challenge: Destino Devconnect (AIni Pay). |
 | **2025–26** | 🧑‍🤝‍🧑 Co-organizer of **Aleph Hackathon: La Paz chapter** and the **Vercel hackathon at UMSA**. |
