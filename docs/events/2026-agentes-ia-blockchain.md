@@ -12,3 +12,5 @@ Crypto Coders and ADC organized the gathering, with support from the Blockchain 
 
 - **Date:** Thursday, 29 October 2026
 - **Time:** 16:00–18:00 (Bolivia time)
+- **Venue:** sixth-floor auditorium, Computer Science program, Universidad Mayor de San Andrés (UMSA), La Paz, Bolivia
+
