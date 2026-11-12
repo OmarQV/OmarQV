@@ -102,7 +102,8 @@ agent-commerce/   onchain-evidence/   stellar-payments/   secure-by-design/
 - 🎓 **Informatics, Information Security track** at Universidad Mayor de San Andrés (UMSA). Now in 8th semester: risk management, information-asset management and systems auditing.
 - 📚 Also trained in **public accounting**, which gives me a useful lens for controls, traceability and auditability.
 - 👨‍🏫 Former teaching assistant in **Web Programming II** at UMSA.
-- 🤝 Active in Bolivia’s developer and Web3 communities through workshops, hackathons and event organizing.
+- 🤝 **Crypto Coders core member** and co-organizer of [Agentes IA + Blockchain](./docs/events/2026-agentes-ia-blockchain.md), a four-talk gathering at UMSA with BAF and Stellar support.
+- 🧑‍🤝‍🧑 Active in Bolivia’s developer and Web3 communities through workshops and hackathons.
 
 <p align="center"><img src="./assets/divider.svg" width="100%" alt="" /></p>
 
