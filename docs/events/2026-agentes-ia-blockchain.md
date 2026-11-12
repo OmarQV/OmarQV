@@ -24,3 +24,4 @@ Four short talks moved from agent fundamentals to a Stellar transaction.
 
 | Talk | Focus |
 | :--- | :--- |
+| The awakening of the agent | From chat to action: goals, tools and tasks. |
