@@ -35,3 +35,5 @@ A hypothetical cinema-ticket purchase showed an agent finding an option, prepari
 
 The example emphasized explicit human approval and checks before signing a transaction, including the risks of automating payments.
 
+The final talk included a three-minute video demonstration of TilcAI, the team's agent-commerce initiative on Stellar. Questions were integrated into the talks, followed by a community gathering.
+
