@@ -35,3 +35,8 @@ do not commit those preview assets in place of the live ones.
 
 The sidebar bio and pinned repositories are controlled in GitHub account
 settings, outside this README. The README itself does not list projects.
+## Agentes IA + Blockchain (29 October 2026)
+
+- The [public Luma event page](https://luma.com/742fo5f8) lists Omar as a host and credits Crypto Coders and ADC as organizers, with BAF and Stellar as supporters.
+- The private event report records 277 approved registrations and 121 check-ins (43.7% of approved registrations). It does not prove subsequent Stellar ambassador conversions.
+- Keep the report private: it includes a personal identifier and financial details. Publish only the aggregate summary in the event record.
