@@ -14,3 +14,7 @@ Crypto Coders and ADC organized the gathering, with support from the Blockchain 
 - **Time:** 16:00–18:00 (Bolivia time)
 - **Venue:** sixth-floor auditorium, Computer Science program, Universidad Mayor de San Andrés (UMSA), La Paz, Bolivia
 
+## Purpose
+
+The session introduced students to how AI agents use tools, how they can interact with blockchain, and what permissions people should retain when an agent prepares a transaction.
+
