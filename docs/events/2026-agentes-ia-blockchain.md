@@ -37,3 +37,7 @@ The example emphasized explicit human approval and checks before signing a trans
 
 The final talk included a three-minute video demonstration of TilcAI, the team's agent-commerce initiative on Stellar. Questions were integrated into the talks, followed by a community gathering.
 
+## Participation
+
+The organizer's Luma export recorded **277 approved registrations** and **121 check-ins**. That is **43.7% attendance** among approved registrations.
+
