@@ -27,3 +27,5 @@ Four short talks moved from agent fundamentals to a Stellar transaction.
 | The awakening of the agent | From chat to action: goals, tools and tasks. |
 | The cult of agents | Skills, tools and coordination of specialized subagents. |
 | Agents on Stellar | Blockchain basics, transactions and the Stellar ecosystem. |
+| From agent to transaction | Automation use cases, permissions and human review. |
+
