@@ -20,6 +20,7 @@
 $ whoami
 > Omar — software engineer from La Paz, Bolivia
 > I build at the intersection of AI agents, Web3 and information security.
+> Core member of Crypto Coders; co-organizer of Agentes IA + Blockchain.
 
 $ cat principles.txt
 > The core computes. The evidence proves. The agent explains. The person decides.
