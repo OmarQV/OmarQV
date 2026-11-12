@@ -18,3 +18,9 @@ Crypto Coders and ADC organized the gathering, with support from the Blockchain 
 
 The session introduced students to how AI agents use tools, how they can interact with blockchain, and what permissions people should retain when an agent prepares a transaction.
 
+## Programme
+
+Four short talks moved from agent fundamentals to a Stellar transaction.
+
+| Talk | Focus |
+| :--- | :--- |
