@@ -21,3 +21,15 @@ A personal archive in reverse chronological order. Dates refer to the start of a
 | Mar | [Aleph Hackathon · La Paz](https://alephhackathon.crecimiento.build/) | Co-organizer and builder |
 | Feb 6 | [Convergence · Chainlink](https://chain.link/hackathon) | Project development |
 | Jan 30 | [ETHGlobal HackMoney](https://ethglobal.com/events/hackmoney2026) | Builder |
+
+## 2025
+
+| Date | Event | Role |
+| --- | --- | --- |
+| Nov 21 | [ETHGlobal Buenos Aires](https://ethglobal.com/events/buenosaires) | Builder |
+| Nov 18 | [ETHCon Argentina](https://ethcon.ar/) | Attendee |
+| Nov 17 | [Devconnect Argentina](https://devconnect.org/) | Attendee, following a CochaBlock team win |
+| Oct 11 | Hackathon Banco Unión | Finalist, team Yasta |
+| Oct 4 | NASA Space Apps Challenge · La Paz | Builder · CICADA 3301 |
+| Sep 19 | [CochaBlock Challenge](https://devconnect.org/es/destino) | 1st place, team AIni Pay |
+| Aug 1 | ETH Bolivia Buildathon · Santa Cruz | Builder · Cocadena |
