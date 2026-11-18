@@ -33,3 +33,10 @@ A personal archive in reverse chronological order. Dates refer to the start of a
 | Oct 4 | NASA Space Apps Challenge · La Paz | Builder · CICADA 3301 |
 | Sep 19 | [CochaBlock Challenge](https://devconnect.org/es/destino) | 1st place, team AIni Pay |
 | Aug 1 | ETH Bolivia Buildathon · Santa Cruz | Builder · Cocadena |
+
+## Other activity with year confirmed
+
+- **2026:** InnovaImpacto, Stellar Hacks Agentic AI, ETH México AI × Blockchain, UNESCO Youth Hackathon, ElevateU and Ideatón Stellar with AndesMaaS.
+- **2025:** Trustless, ChildFund, Avalanche Hackathon, Cookathon, Aleph, Stacks sBTC, ICP WCHL, Mobile3, Generación Bicentenario, S Tier Student and Somnia.
+
+See the [interactive credential archive](https://omidev.vercel.app/#events) for the individual records, dates and roles.
