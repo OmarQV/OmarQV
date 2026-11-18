@@ -57,6 +57,13 @@ agent-commerce/   onchain-evidence/   stellar-payments/   secure-by-design/
 
 [**2026–2025 event history**](./docs/EVENTS.md) · [**Interactive credential archive**](https://omidev.vercel.app/#events)
 
+<details>
+<summary>NASA Space Apps Cochabamba · jury badge</summary>
+<p align="center"><a href="./docs/events/2026-space-apps-cochabamba.md"><img src="./assets/space-apps-cochabamba-jury.svg" width="220" alt="Portfolio recreation of Omar’s NASA Space Apps jury badge, Cochabamba 2026" /></a></p>
+</details>
+
+<p align="center"><img src="./assets/divider.svg" width="100%" alt="" /></p>
+
 ## ⚡ What I build
 
 | Area | How I approach it |
