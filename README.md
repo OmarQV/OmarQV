@@ -53,6 +53,10 @@ agent-commerce/   onchain-evidence/   stellar-payments/   secure-by-design/
 
 <p align="center"><img src="./assets/divider.svg" width="100%" alt="" /></p>
 
+## Events & hackathons
+
+[**2026–2025 event history**](./docs/EVENTS.md) · [**Interactive credential archive**](https://omidev.vercel.app/#events)
+
 ## ⚡ What I build
 
 | Area | How I approach it |
