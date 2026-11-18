@@ -40,3 +40,10 @@ settings, outside this README. The README itself does not list projects.
 - The [public Luma event page](https://luma.com/742fo5f8) lists Omar as a host and credits Crypto Coders and ADC as organizers, with BAF and Stellar as supporters.
 - The private event report records 277 approved registrations and 121 check-ins (43.7% of approved registrations). It does not prove subsequent Stellar ambassador conversions.
 - Keep the report private: it includes a personal identifier and financial details. Publish only the aggregate summary in the event record.
+
+## Event history and credential art
+
+- [Event index](docs/EVENTS.md) keeps dated activities from newest to oldest by year. Entries without exact dates stay in the separate year-only list.
+- The November 15 jury role is specific to the Cochabamba edition. The event page verifies its dates and venue. Omar’s personal credential records his role.
+- `assets/space-apps-cochabamba-jury.svg` is an illustrated portfolio recreation. The original photo with its QR stays private.
+- Interactive flipping and scroll effects live in [OMIDEV](https://omidev.vercel.app/#events). GitHub presents a static badge and links to the event record.
