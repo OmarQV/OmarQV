@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="554" viewBox="0 0 400 554" role="img" aria-labelledby="title desc">
+<title id="title">NASA Space Apps Cochabamba 2026 · Jury</title>
+<desc id="desc">Portfolio recreation of Omar Quispe Vargas's jury badge with violet lanyard and navy orbital design.</desc>
+<defs>
+  <linearGradient id="card" x2="1" y2="1" gradientUnits="objectBoundingBox"><stop stop-color="#121d3b"/><stop offset="1" stop-color="#30365e"/></linearGradient>
+  <linearGradient id="strap"><stop stop-color="#512f90"/><stop offset=".45" stop-color="#9e76dc"/><stop offset="1" stop-color="#6743ae"/></linearGradient>
+  <linearGradient id="metal"><stop stop-color="#5f677d"/><stop offset=".47" stop-color="#f0f1fa"/><stop offset="1" stop-color="#76839c"/></linearGradient>
+  <clipPath id="clip"><rect x="63" y="105" width="274" height="386" rx="12"/></clipPath>
+</defs>
+<path d="M179 0h42v69a5 5 0 0 1-5 5h-32a5 5 0 0 1-5-5z" fill="url(#strap)"/>
+<path d="M184 0v69m31-69v69" stroke="#e4ceff" stroke-opacity=".2" stroke-width="2"/>
+<ellipse cx="200" cy="76" rx="15" ry="12" fill="none" stroke="url(#metal)" stroke-width="6"/>
+<rect x="56" y="98" width="288" height="400" rx="16" fill="#7e8fba" fill-opacity=".17" stroke="#8291b9"/>
+<rect x="63" y="105" width="274" height="386" rx="12" fill="url(#card)"/>
+<g clip-path="url(#clip)">
+  <circle cx="332" cy="457" r="88" fill="#414d7e"/>
+  <g fill="none" stroke="#8f9de3" stroke-opacity=".55" transform="rotate(-26 314 454)">
+    <ellipse cx="314" cy="454" rx="139" ry="28" stroke-width="3"/>
+    <ellipse cx="314" cy="454" rx="120" ry="20"/>
+  </g>
+  <g fill="#c9d4ff" opacity=".66">
+    <circle cx="113" cy="136" r="1.5"/><circle cx="280" cy="146" r="1.4"/><circle cx="311" cy="199" r="2"/><circle cx="89" cy="299" r="1.4"/><circle cx="268" cy="341" r="1.5"/><circle cx="124" cy="420" r="1.8"/>
+  </g>
+</g>
+<rect x="179" y="118" width="42" height="8" rx="4" fill="#0b1021"/>
+<rect x="194" y="83" width="12" height="40" rx="6" fill="url(#metal)"/>
+<g font-family="system-ui, sans-serif">
+  <text x="88" y="169" fill="#cdd9ff" font-size="14" letter-spacing="2">COCHABAMBA / 2026</text>
+  <text x="86" y="218" fill="#f6d577" font-size="37" font-weight="800">Space Apps</text>
+  <text x="88" y="245" fill="#f1f4ff" font-size="15">NASA International Challenge</text>
+  <path d="M88 274h223" stroke="#969cba" opacity=".62"/>
+  <text x="88" y="315" fill="#f6d577" font-size="19" font-weight="700" letter-spacing="2">JURADO</text>
+  <text x="88" y="373" fill="#f8faff" font-size="19" font-weight="700">Omar Quispe Vargas</text>
+  <text x="88" y="402" fill="#d0dbff" font-size="14">15 NOV · FEXCO</text>
+  <text x="200" y="532" fill="#687498" font-size="13" text-anchor="middle">PORTFOLIO RECREATION</text>
+</g>
+</svg>
